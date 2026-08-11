@@ -542,8 +542,8 @@
 ###  http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site
 :Touristic_Site rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#E27_Site> ;
-                rdfs:label "A space open to visitors." ,
-                           "Touristic Site" .
+                rdfs:comment "A space open to visitors." ;
+                rdfs:label "Touristic Site" .
 
 
 ###  http://www.semanticweb.org/int-act-project/E2E3-ontology#Video

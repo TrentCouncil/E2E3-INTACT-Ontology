@@ -860,7 +860,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
-        <rdfs:label>A space open to visitors.</rdfs:label>
+        <rdfs:comment>A space open to visitors.</rdfs:comment>
         <rdfs:label>Touristic Site</rdfs:label>
     </owl:Class>
     

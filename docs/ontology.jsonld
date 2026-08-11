@@ -524,9 +524,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A space open to visitors."
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Touristic Site"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
