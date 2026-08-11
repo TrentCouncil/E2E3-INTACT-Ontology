@@ -42,6 +42,27 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "E26 Physical Feature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing"
+  } ]
+}, {
+  "@id" : "http://www.co-ode.org/ontologies/ont.owl#E27_Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class comprises pieces of land or sea floor. In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps. Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "E27 Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
@@ -99,6 +120,18 @@
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The area where traces of human occupation have been found."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Archaeological Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#E27_Site"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -120,6 +153,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A place of importance recognised for its historical and cultural value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cultural Heritage Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#E27_Site"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator",
@@ -312,6 +357,18 @@
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A specific geographical area where large stone monuments or constructions, like stones circles or standing stones, are located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Megalithic Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -391,17 +448,16 @@
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/int-act-project/E2E3-ontology#format" : [ {
-    "@value" : "HorseShoe_Shape"
-  } ],
-  "http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType" : [ {
-    "@value" : "Granite"
-  } ],
-  "http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism" : [ {
-    "@value" : "Non-Funerary"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site"
+  }, {
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site"
+  }, {
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site"
+  }, {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech"
+  }, {
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment",
@@ -428,6 +484,18 @@
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Text"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A location where ancient religious or ceremonial/ritualistic practices were/are conducted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Spiritual Or Ritual Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#E27_Site"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -452,6 +520,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A space open to visitors."
+  }, {
+    "@value" : "Touristic Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#E27_Site"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Video",
@@ -482,35 +561,6 @@
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#format",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "format"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#heightMeters",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "height Meters"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -521,48 +571,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "rock Type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeArtefacts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "usagetype Artefacts"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "usagetype Megalithism"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",

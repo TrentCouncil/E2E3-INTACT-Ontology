@@ -515,63 +515,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#format -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#format">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">format</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#heightMeters -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#heightMeters">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">height Meters</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">rock Type</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeArtefacts -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeArtefacts">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">usagetype Artefacts</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">usagetype Megalithism</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#notation -->
 
 
@@ -593,6 +536,27 @@
      -->
 
 
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature -->
+
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing"/>
+        <rdfs:label>E26 Physical Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#E27_Site -->
+
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#E27_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature"/>
+        <rdfs:comment>This class comprises pieces of land or sea floor. In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps. Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location.</rdfs:comment>
+        <rdfs:label>E27 Site</rdfs:label>
+    </owl:Class>
     
 
 
@@ -618,6 +582,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:comment>The area where traces of human occupation have been found.</rdfs:comment>
+        <rdfs:label>Archaeological Site</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio -->
 
 
@@ -635,6 +610,17 @@
     <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing"/>
         <rdfs:label xml:lang="en">Cultural Heritage Monument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:comment>A place of importance recognised for its historical and cultural value.</rdfs:comment>
+        <rdfs:label>Cultural Heritage Site</rdfs:label>
     </owl:Class>
     
 
@@ -803,6 +789,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site"/>
+        <rdfs:comment>A specific geographical area where large stone monuments or constructions, like stones circles or standing stones, are located.</rdfs:comment>
+        <rdfs:label>Megalithic Site</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative -->
 
 
@@ -825,6 +822,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:comment>A location where ancient religious or ceremonial/ritualistic practices were/are conducted.</rdfs:comment>
+        <rdfs:label>Spiritual Or Ritual Site</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech -->
 
 
@@ -843,6 +851,17 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
         <rdfs:comment>The written files of the interviews</rdfs:comment>
         <rdfs:label xml:lang="en">Text</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:label>A space open to visitors.</rdfs:label>
+        <rdfs:label>Touristic Site</rdfs:label>
     </owl:Class>
     
 
@@ -939,10 +958,11 @@
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech"/>
-        <format>HorseShoe_Shape</format>
-        <rockType>Granite</rockType>
-        <usagetypeMegalithism>Non-Funerary</usagetypeMegalithism>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site"/>
     </owl:NamedIndividual>
     
 
