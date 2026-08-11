@@ -1,0 +1,3249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>E2E3 INT-ACT Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/int-act-project/E2E3-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/int-act-project/E2E3-ontology","name":"E2E3 INT-ACT Ontology", "headline":"Document describing the ontology http://www.semanticweb.org/int-act-project/E2E3-ontology", "dateReleased":"Tue Aug 11 14:00:12 WEST 2026", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"INT-ACT UÉvora Team"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>E2E3 INT-ACT Ontology</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://www.semanticweb.org/int-act-project/E2E3-ontology">http://www.semanticweb.org/int-act-project/E2E3-ontology</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/int-act-project/E2E3-ontology">http://www.semanticweb.org/int-act-project/E2E3-ontology</a></dd>
+<dt>Authors:</dt>
+<dd>INT-ACT UÉvora Team</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>INT-ACT UÉvora Team. E2E3 INT-ACT Ontology. Retrieved from: http://www.semanticweb.org/int-act-project/E2E3-ontology</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">E2E3 INT-ACT Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#3DModel"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#3DModel">3D Model</a>
+   </li>
+   <li>
+      <a href="#App"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#App">App</a>
+   </li>
+   <li>
+      <a href="#ArchaeologicalMonument"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument">Archaeological Monument</a>
+   </li>
+   <li>
+      <a href="#Audio"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio">Audio</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Collection" title="http://www.w3.org/2004/02/skos/core#Collection">
+         <span>Collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+         title="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+         <span>Concept Scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a>
+   </li>
+   <li>
+      <a href="#CulturalHeritageMonument"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument">Cultural Heritage Monument</a>
+   </li>
+   <li>
+      <a href="#Demonstrator"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator">Demonstrator</a>
+   </li>
+   <li>
+      <a href="#E1_CRM_Entity"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity">E1 CRM Entity</a>
+   </li>
+   <li>
+      <a href="#E18_Physical_Thing"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing">E18 Physical Thing</a>
+   </li>
+   <li>
+      <a href="#E24_Physical_Human-Made_Thing"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing">E24 Physical Human Made Thing</a>
+   </li>
+   <li>
+      <a href="#E31_Document"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a>
+   </li>
+   <li>
+      <a href="#E33_Linguistic_Object"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object">E33 Linguistic Object</a>
+   </li>
+   <li>
+      <a href="#E55_Type"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type">E55 Type</a>
+   </li>
+   <li>
+      <a href="#E70_Thing"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing">E70 Thing</a>
+   </li>
+   <li>
+      <a href="#E71_Human-Made_Thing"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing">E71 Human Made Thing</a>
+   </li>
+   <li>
+      <a href="#E73_Information_Object"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object">E73 Information Object</a>
+   </li>
+   <li>
+      <a href="#E89_Propositional_Object"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">E89 Propositional Object</a>
+   </li>
+   <li>
+      <a href="#E90_Symbolic_Object"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object">E90 Symbolic Object</a>
+   </li>
+   <li>
+      <a href="#Image"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image">Image</a>
+   </li>
+   <li>
+      <a href="#Intangible_Feature"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a>
+   </li>
+   <li>
+      <a href="#Interview"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview">Interview</a>
+   </li>
+   <li>
+      <a href="#MegalithicMonument"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument">Megalithic Monument</a>
+   </li>
+   <li>
+      <a href="#Narrative"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative">Narrative</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#OrderedCollection"
+         title="http://www.w3.org/2004/02/skos/core#OrderedCollection">
+         <span>Ordered Collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Roll_up"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up">Roll up</a>
+   </li>
+   <li>
+      <a href="#StoneCircleOrCromlech"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech">Stone Circle Or Cromlech</a>
+   </li>
+   <li>
+      <a href="#Text"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Text">Text</a>
+   </li>
+   <li>
+      <a href="#Video"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Video">Video</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#broadMatch" title="http://www.w3.org/2004/02/skos/core#broadMatch">
+         <span>broad Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">
+         <span>broader</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#broaderTransitive"
+         title="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+         <span>broader Transitive</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#closeMatch" title="http://www.w3.org/2004/02/skos/core#closeMatch">
+         <span>close Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#connectsTo"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo">connects to</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#exactMatch" title="http://www.w3.org/2004/02/skos/core#exactMatch">
+         <span>exact Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept"
+         title="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+         <span>has Top Concept</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">
+         <span>in Scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#mappingRelation"
+         title="http://www.w3.org/2004/02/skos/core#mappingRelation">
+         <span>mapping Relation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#member" title="http://www.w3.org/2004/02/skos/core#member">
+         <span>member</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#memberList" title="http://www.w3.org/2004/02/skos/core#memberList">
+         <span>member List</span>
+      </a>
+   </li>
+   <li>
+      <a href="#mentions"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions">
+         <span>mentions</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#narrowMatch" title="http://www.w3.org/2004/02/skos/core#narrowMatch">
+         <span>narrow Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">
+         <span>narrower</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#narrowerTransitive"
+         title="http://www.w3.org/2004/02/skos/core#narrowerTransitive">
+         <span>narrower Transitive</span>
+      </a>
+   </li>
+   <li>
+      <a href="#P129_isAbout"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout">P129 is About</a>
+   </li>
+   <li>
+      <a href="#P165_incorporates"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates">P165 incorporates</a>
+   </li>
+   <li>
+      <a href="#P46_IsComposedOf"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf">P46 is composed of</a>
+   </li>
+   <li>
+      <a href="#P67_refers_to"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to">P67 refers to</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">
+         <span>related</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#relatedMatch" title="http://www.w3.org/2004/02/skos/core#relatedMatch">
+         <span>related Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#semanticRelation"
+         title="http://www.w3.org/2004/02/skos/core#semanticRelation">
+         <span>semantic Relation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf">
+         <span>top Concept Of</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#format"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#format">format</a>
+   </li>
+   <li>
+      <a href="#heightMeters"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#heightMeters">height Meters</a>
+   </li>
+   <li>
+      <a href="#Link"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Link">Link</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">
+         <span>notation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#rockType"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType">rock Type</a>
+   </li>
+   <li>
+      <a href="#usagetypeArtefacts"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeArtefacts">usagetype Artefacts</a>
+   </li>
+   <li>
+      <a href="#usagetypeMegalithism"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism">usagetype Megalithism</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Anger" title="http://www.w3.org/2004/02/skos/core#Anger">Anger</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Appreciation"
+         title="http://www.w3.org/2004/02/skos/core#Appreciation">Appreciation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Awe" title="http://www.w3.org/2004/02/skos/core#Awe">Awe</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions"
+         title="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">Civic and Ethical Emotions</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Collective_Belonging"
+         title="http://www.w3.org/2004/02/skos/core#Collective_Belonging">Collective belonging</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions"
+         title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression"
+         title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Well-being"
+         title="http://www.w3.org/2004/02/skos/core#Cultural_Well-being">Cultural well-being</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions"
+         title="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">Difficult and Conflictual Emotions</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection"
+         title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Well-being"
+         title="http://www.w3.org/2004/02/skos/core#Emotional_Well-being">Emotional well-being</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences"
+         title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Environmental_Well-being"
+         title="http://www.w3.org/2004/02/skos/core#Environmental_Well-being">Environmental well-being</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Hearing" title="http://www.w3.org/2004/02/skos/core#Hearing">Hearing</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Identity_and_Belonging"
+         title="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">Identity and Belonging</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Injustice_Indignation"
+         title="http://www.w3.org/2004/02/skos/core#Injustice_Indignation">Injustice/Indignation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Intellectual_Well-being"
+         title="http://www.w3.org/2004/02/skos/core#Intellectual_Well-being">Intellectual well-being</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being"
+         title="http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being">Interpersonal well-being</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Loss/Grief" title="http://www.w3.org/2004/02/skos/core#Loss/Grief">Loss/Grief</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Narrating" title="http://www.w3.org/2004/02/skos/core#Narrating">Narrating</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Nostalgia" title="http://www.w3.org/2004/02/skos/core#Nostalgia">Nostalgia</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Performing" title="http://www.w3.org/2004/02/skos/core#Performing">Performing</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Pride" title="http://www.w3.org/2004/02/skos/core#Pride">Pride</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Respect" title="http://www.w3.org/2004/02/skos/core#Respect">Respect</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship"
+         title="http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship">Responsibility/Stewardship</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Ritualizing" title="http://www.w3.org/2004/02/skos/core#Ritualizing">Ritualizing</a>
+   </li>
+   <li>
+      <a href="#S1_Cromeleque_das_Fontaínhas"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas">
+         <span>S1 Cromeleque das Fontaínhas</span>
+      </a>
+   </li>
+   <li>
+      <a href="#S1_ImgFont1_Environment"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment">
+         <span>S1 Img Font1 Environment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#S1_NrtFont1"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1">
+         <span>S1 Nrt Font1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#S1_TextFont1"
+         title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_TextFont1">
+         <span>S1 Text Font1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Seeing" title="http://www.w3.org/2004/02/skos/core#Seeing">Seeing</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Self-perception"
+         title="http://www.w3.org/2004/02/skos/core#Self-perception">Self-perception</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience"
+         title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Smelling" title="http://www.w3.org/2004/02/skos/core#Smelling">Smelling</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Spiritual_Well-being"
+         title="http://www.w3.org/2004/02/skos/core#Spiritual_Well-being">Spiritual well-being</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Tasting" title="http://www.w3.org/2004/02/skos/core#Tasting">Tasting</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Touching" title="http://www.w3.org/2004/02/skos/core#Touching">Touching</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Value_Alignment"
+         title="http://www.w3.org/2004/02/skos/core#Value_Alignment">Value alignment</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Visualizing" title="http://www.w3.org/2004/02/skos/core#Visualizing">Visualizing</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">E2E3 INT-ACT Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This ontology reuses and integrates the SKOS (Simple Knowledge Organization System) vocabulary for the organisation of domain-specific concepts, and builds upon the CIDOC Conceptual Reference Model (CRM) for the representation of cultural heritage entities and events.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for E2E3 INT-ACT Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by E2E3 INT-ACT Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#3DModel" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#3DModel">3D Model</a></li>
+  <li><a href="#App" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#App">App</a></li>
+  <li><a href="#ArchaeologicalMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument">Archaeological Monument</a></li>
+  <li><a href="#Audio" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio">Audio</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Collection" title="http://www.w3.org/2004/02/skos/core#Collection"> <span>Collection</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme"> <span>Concept Scheme</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a></li>
+  <li><a href="#CulturalHeritageMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument">Cultural Heritage Monument</a></li>
+  <li><a href="#Demonstrator" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator">Demonstrator</a></li>
+  <li><a href="#E1_CRM_Entity" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity">E1 CRM Entity</a></li>
+  <li><a href="#E18_Physical_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing">E18 Physical Thing</a></li>
+  <li><a href="#E24_Physical_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing">E24 Physical Human Made Thing</a></li>
+  <li><a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a></li>
+  <li><a href="#E33_Linguistic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object">E33 Linguistic Object</a></li>
+  <li><a href="#E55_Type" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type">E55 Type</a></li>
+  <li><a href="#E70_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing">E70 Thing</a></li>
+  <li><a href="#E71_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing">E71 Human Made Thing</a></li>
+  <li><a href="#E73_Information_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object">E73 Information Object</a></li>
+  <li><a href="#E89_Propositional_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">E89 Propositional Object</a></li>
+  <li><a href="#E90_Symbolic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object">E90 Symbolic Object</a></li>
+  <li><a href="#Image" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image">Image</a></li>
+  <li><a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a></li>
+  <li><a href="#Interview" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview">Interview</a></li>
+  <li><a href="#MegalithicMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument">Megalithic Monument</a></li>
+  <li><a href="#Narrative" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative">Narrative</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#OrderedCollection" title="http://www.w3.org/2004/02/skos/core#OrderedCollection"> <span>Ordered Collection</span> </a></li>
+  <li><a href="#Roll_up" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up">Roll up</a></li>
+  <li><a href="#StoneCircleOrCromlech" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech">Stone Circle Or Cromlech</a></li>
+  <li><a href="#Text" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Text">Text</a></li>
+  <li><a href="#Video" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Video">Video</a></li>
+ </ul>
+ <div class="entity" id="3DModel">
+  <h3>3D Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#3DModel</p>
+  <div class="comment">
+   <span class="markdown">3D model files</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="App">
+  <h3>App<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#App</p>
+  <div class="comment">
+   <span class="markdown">A software application designed to guide or assist users, often in cultural or educational contexts</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ArchaeologicalMonument">
+  <h3>Archaeological Monument<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument</p>
+  <div class="comment">
+   <span class="markdown">A monument that preserves traces of human occupation</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalHeritageMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument">Cultural Heritage Monument</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#MegalithicMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument">Megalithic Monument</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Audio">
+  <h3>Audio<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio</p>
+  <div class="comment">
+   <span class="markdown">Audio files</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Link" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Link">Link</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Collection">
+  <h3>Collection<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Collection</p>
+  <div class="comment">
+   <span class="markdown">A meaningful collection of concepts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#OrderedCollection" title="http://www.w3.org/2004/02/skos/core#OrderedCollection">Ordered Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#member" title="http://www.w3.org/2004/02/skos/core#member">member</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#member" title="http://www.w3.org/2004/02/skos/core#member">member</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+  <h3>Concept Scheme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
+  <div class="comment">
+   <span class="markdown">A set of concepts, optionally including statements about semantic relationships between those concepts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Collection" title="http://www.w3.org/2004/02/skos/core#Collection">Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
+  <h3>Concept(Intangible Feature)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
+  <div class="comment">
+   <span class="markdown">An idea or notion; a unit of thought.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#semanticRelation" title="http://www.w3.org/2004/02/skos/core#semanticRelation">semantic Relation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#member" title="http://www.w3.org/2004/02/skos/core#member">member</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#semanticRelation" title="http://www.w3.org/2004/02/skos/core#semanticRelation">semantic Relation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Anger" title="http://www.w3.org/2004/02/skos/core#Anger">Anger</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Appreciation" title="http://www.w3.org/2004/02/skos/core#Appreciation">Appreciation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Awe" title="http://www.w3.org/2004/02/skos/core#Awe">Awe</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions" title="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">Civic and Ethical Emotions</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Collective_Belonging" title="http://www.w3.org/2004/02/skos/core#Collective_Belonging">Collective belonging</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression" title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Well-being" title="http://www.w3.org/2004/02/skos/core#Cultural_Well-being">Cultural well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions" title="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">Difficult and Conflictual Emotions</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection" title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Well-being" title="http://www.w3.org/2004/02/skos/core#Emotional_Well-being">Emotional well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences" title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Environmental_Well-being" title="http://www.w3.org/2004/02/skos/core#Environmental_Well-being">Environmental well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Hearing" title="http://www.w3.org/2004/02/skos/core#Hearing">Hearing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Identity_and_Belonging" title="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">Identity and Belonging</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Injustice_Indignation" title="http://www.w3.org/2004/02/skos/core#Injustice_Indignation">Injustice/Indignation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Intellectual_Well-being" title="http://www.w3.org/2004/02/skos/core#Intellectual_Well-being">Intellectual well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being" title="http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being">Interpersonal well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Loss/Grief" title="http://www.w3.org/2004/02/skos/core#Loss/Grief">Loss/Grief</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Narrating" title="http://www.w3.org/2004/02/skos/core#Narrating">Narrating</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Nostalgia" title="http://www.w3.org/2004/02/skos/core#Nostalgia">Nostalgia</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Performing" title="http://www.w3.org/2004/02/skos/core#Performing">Performing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Pride" title="http://www.w3.org/2004/02/skos/core#Pride">Pride</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Respect" title="http://www.w3.org/2004/02/skos/core#Respect">Respect</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship" title="http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship">Responsibility/Stewardship</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Ritualizing" title="http://www.w3.org/2004/02/skos/core#Ritualizing">Ritualizing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Seeing" title="http://www.w3.org/2004/02/skos/core#Seeing">Seeing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Self-perception" title="http://www.w3.org/2004/02/skos/core#Self-perception">Self-perception</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Smelling" title="http://www.w3.org/2004/02/skos/core#Smelling">Smelling</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Spiritual_Well-being" title="http://www.w3.org/2004/02/skos/core#Spiritual_Well-being">Spiritual well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Tasting" title="http://www.w3.org/2004/02/skos/core#Tasting">Tasting</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Touching" title="http://www.w3.org/2004/02/skos/core#Touching">Touching</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Value_Alignment" title="http://www.w3.org/2004/02/skos/core#Value_Alignment">Value alignment</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Visualizing" title="http://www.w3.org/2004/02/skos/core#Visualizing">Visualizing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalHeritageMonument">
+  <h3>Cultural Heritage Monument<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E24_Physical_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing">E24 Physical Human Made Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ArchaeologicalMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument">Archaeological Monument</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Demonstrator">
+  <h3>Demonstrator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator</p>
+  <div class="comment">
+   <span class="markdown">A prototype or tool created to showcase a concept or functionality</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E71_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing">E71 Human Made Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E1_CRM_Entity">
+  <h3>E1 CRM Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#E55_Type" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type">E55 Type</a> <sup class="type-c" title="class">c</sup>, <a href="#E70_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing">E70 Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#P129_isAbout" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout">P129 is About</a> <sup class="type-op" title="object property">op</sup>, <a href="#P67_refers_to" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to">P67 refers to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E18_Physical_Thing">
+  <h3>E18 Physical Thing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E70_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing">E70 Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#E24_Physical_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing">E24 Physical Human Made Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#P46_IsComposedOf" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf">P46 is composed of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#P46_IsComposedOf" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf">P46 is composed of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E24_Physical_Human-Made_Thing">
+  <h3>E24 Physical Human Made Thing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E18_Physical_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing">E18 Physical Thing</a> <sup class="type-c" title="class">c</sup>, <a href="#E71_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing">E71 Human Made Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CulturalHeritageMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument">Cultural Heritage Monument</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E31_Document">
+  <h3>E31 Document<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E73_Information_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object">E73 Information Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#3DModel" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#3DModel">3D Model</a> <sup class="type-c" title="class">c</sup>, <a href="#App" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#App">App</a> <sup class="type-c" title="class">c</sup>, <a href="#Audio" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio">Audio</a> <sup class="type-c" title="class">c</sup>, <a href="#Image" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image">Image</a> <sup class="type-c" title="class">c</sup>, <a href="#Roll_up" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up">Roll up</a> <sup class="type-c" title="class">c</sup>, <a href="#Text" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Text">Text</a> <sup class="type-c" title="class">c</sup>, <a href="#Video" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Video">Video</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#connectsTo" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo">connects to</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E33_Linguistic_Object">
+  <h3>E33 Linguistic Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E73_Information_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object">E73 Information Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Interview" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview">Interview</a> <sup class="type-c" title="class">c</sup>, <a href="#Narrative" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative">Narrative</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E55_Type">
+  <h3>E55 Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E1_CRM_Entity" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity">E1 CRM Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E70_Thing">
+  <h3>E70 Thing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E1_CRM_Entity" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity">E1 CRM Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#E18_Physical_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing">E18 Physical Thing</a> <sup class="type-c" title="class">c</sup>, <a href="#E71_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing">E71 Human Made Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E71_Human-Made_Thing">
+  <h3>E71 Human Made Thing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E70_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing">E70 Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Demonstrator" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator">Demonstrator</a> <sup class="type-c" title="class">c</sup>, <a href="#E24_Physical_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing">E24 Physical Human Made Thing</a> <sup class="type-c" title="class">c</sup>, <a href="#E89_Propositional_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">E89 Propositional Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E73_Information_Object">
+  <h3>E73 Information Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E90_Symbolic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object">E90 Symbolic Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>, <a href="#E33_Linguistic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object">E33 Linguistic Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E89_Propositional_Object">
+  <h3>E89 Propositional Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E71_Human-Made_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing">E71 Human Made Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#E90_Symbolic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object">E90 Symbolic Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#P129_isAbout" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout">P129 is About</a> <sup class="type-op" title="object property">op</sup>, <a href="#P165_incorporates" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates">P165 incorporates</a> <sup class="type-op" title="object property">op</sup>, <a href="#P67_refers_to" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to">P67 refers to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="E90_Symbolic_Object">
+  <h3>E90 Symbolic Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E89_Propositional_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">E89 Propositional Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#E73_Information_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object">E73 Information Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#P165_incorporates" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates">P165 incorporates</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Image">
+  <h3>Image<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Image</p>
+  <div class="comment">
+   <span class="markdown">Image FIles</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Link" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Link">Link</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#S1_ImgFont1_Environment" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment">S1 Img Font1 Environment</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Intangible_Feature">
+  <h3>Intangible Feature<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E55_Type" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type">E55 Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#connectsTo" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo">connects to</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Anger" title="http://www.w3.org/2004/02/skos/core#Anger">Anger</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Appreciation" title="http://www.w3.org/2004/02/skos/core#Appreciation">Appreciation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Awe" title="http://www.w3.org/2004/02/skos/core#Awe">Awe</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions" title="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">Civic and Ethical Emotions</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Collective_Belonging" title="http://www.w3.org/2004/02/skos/core#Collective_Belonging">Collective belonging</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression" title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Well-being" title="http://www.w3.org/2004/02/skos/core#Cultural_Well-being">Cultural well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions" title="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">Difficult and Conflictual Emotions</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection" title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Well-being" title="http://www.w3.org/2004/02/skos/core#Emotional_Well-being">Emotional well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences" title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Environmental_Well-being" title="http://www.w3.org/2004/02/skos/core#Environmental_Well-being">Environmental well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Hearing" title="http://www.w3.org/2004/02/skos/core#Hearing">Hearing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Identity_and_Belonging" title="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">Identity and Belonging</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Injustice_Indignation" title="http://www.w3.org/2004/02/skos/core#Injustice_Indignation">Injustice/Indignation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Intellectual_Well-being" title="http://www.w3.org/2004/02/skos/core#Intellectual_Well-being">Intellectual well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being" title="http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being">Interpersonal well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Loss/Grief" title="http://www.w3.org/2004/02/skos/core#Loss/Grief">Loss/Grief</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Narrating" title="http://www.w3.org/2004/02/skos/core#Narrating">Narrating</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Nostalgia" title="http://www.w3.org/2004/02/skos/core#Nostalgia">Nostalgia</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Performing" title="http://www.w3.org/2004/02/skos/core#Performing">Performing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Pride" title="http://www.w3.org/2004/02/skos/core#Pride">Pride</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Respect" title="http://www.w3.org/2004/02/skos/core#Respect">Respect</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship" title="http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship">Responsibility/Stewardship</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Ritualizing" title="http://www.w3.org/2004/02/skos/core#Ritualizing">Ritualizing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Seeing" title="http://www.w3.org/2004/02/skos/core#Seeing">Seeing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Self-perception" title="http://www.w3.org/2004/02/skos/core#Self-perception">Self-perception</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Smelling" title="http://www.w3.org/2004/02/skos/core#Smelling">Smelling</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Spiritual_Well-being" title="http://www.w3.org/2004/02/skos/core#Spiritual_Well-being">Spiritual well-being</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Tasting" title="http://www.w3.org/2004/02/skos/core#Tasting">Tasting</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Touching" title="http://www.w3.org/2004/02/skos/core#Touching">Touching</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Value_Alignment" title="http://www.w3.org/2004/02/skos/core#Value_Alignment">Value alignment</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Visualizing" title="http://www.w3.org/2004/02/skos/core#Visualizing">Visualizing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Interview">
+  <h3>Interview<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview</p>
+  <div class="comment">
+   <span class="markdown">Conversations capturing personal or collective testimonies.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E33_Linguistic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object">E33 Linguistic Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MegalithicMonument">
+  <h3>Megalithic Monument<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument</p>
+  <div class="comment">
+   <span class="markdown">An archaeological monument built with standing megalithic stones</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArchaeologicalMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument">Archaeological Monument</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#StoneCircleOrCromlech" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech">Stone Circle Or Cromlech</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#format" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#format">format</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rockType" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType">rock Type</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Narrative">
+  <h3>Narrative<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative</p>
+  <div class="comment">
+   <span class="markdown">A story/saying that transmits meaning, sentiments and significant memories of a specific place</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E33_Linguistic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object">E33 Linguistic Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Link" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Link">Link</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#S1_NrtFont1" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1">S1 Nrt Font1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#OrderedCollection">
+  <h3>Ordered Collection<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#OrderedCollection</p>
+  <div class="comment">
+   <span class="markdown">An ordered collection of concepts, where both the grouping and the ordering are meaningful.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Collection" title="http://www.w3.org/2004/02/skos/core#Collection">Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#memberList" title="http://www.w3.org/2004/02/skos/core#memberList">member List</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Roll_up">
+  <h3>Roll up<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up</p>
+  <div class="comment">
+   <span class="markdown">Roll ups of the exhibition</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StoneCircleOrCromlech">
+  <h3>Stone Circle Or Cromlech<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech</p>
+  <div class="comment">
+   <span class="markdown">An arrangement of standing stones (menhirs) placed by humans.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MegalithicMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument">Megalithic Monument</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#S1_Cromeleque_das_Fontaínhas" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas">S1 Cromeleque das Fontaínhas</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Text">
+  <h3>Text<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Text</p>
+  <div class="comment">
+   <span class="markdown">The written files of the interviews</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#S1_TextFont1" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_TextFont1">S1 Text Font1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Video">
+  <h3>Video<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Video</p>
+  <div class="comment">
+   <span class="markdown">Video files</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/2004/02/skos/core#broadMatch" title="http://www.w3.org/2004/02/skos/core#broadMatch"> <span>broad Match</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader"> <span>broader</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#broaderTransitive" title="http://www.w3.org/2004/02/skos/core#broaderTransitive"> <span>broader Transitive</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#closeMatch" title="http://www.w3.org/2004/02/skos/core#closeMatch"> <span>close Match</span> </a></li>
+  <li><a href="#connectsTo" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo">connects to</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#exactMatch" title="http://www.w3.org/2004/02/skos/core#exactMatch"> <span>exact Match</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept" title="http://www.w3.org/2004/02/skos/core#hasTopConcept"> <span>has Top Concept</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme"> <span>in Scheme</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#mappingRelation" title="http://www.w3.org/2004/02/skos/core#mappingRelation"> <span>mapping Relation</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#member" title="http://www.w3.org/2004/02/skos/core#member"> <span>member</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#memberList" title="http://www.w3.org/2004/02/skos/core#memberList"> <span>member List</span> </a></li>
+  <li><a href="#mentions" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions"> <span>mentions</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#narrowMatch" title="http://www.w3.org/2004/02/skos/core#narrowMatch"> <span>narrow Match</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower"> <span>narrower</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#narrowerTransitive" title="http://www.w3.org/2004/02/skos/core#narrowerTransitive"> <span>narrower Transitive</span> </a></li>
+  <li><a href="#P129_isAbout" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout">P129 is About</a></li>
+  <li><a href="#P165_incorporates" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates">P165 incorporates</a></li>
+  <li><a href="#P46_IsComposedOf" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf">P46 is composed of</a></li>
+  <li><a href="#P67_refers_to" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to">P67 refers to</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related"> <span>related</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#relatedMatch" title="http://www.w3.org/2004/02/skos/core#relatedMatch"> <span>related Match</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#semanticRelation" title="http://www.w3.org/2004/02/skos/core#semanticRelation"> <span>semantic Relation</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf"> <span>top Concept Of</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#broadMatch">
+  <h3>broad Match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#broadMatch</p>
+  <div class="comment">
+   <span class="markdown">skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#mappingRelation" title="http://www.w3.org/2004/02/skos/core#mappingRelation">mapping Relation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#narrowMatch" title="http://www.w3.org/2004/02/skos/core#narrowMatch">narrow Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#broader">
+  <h3>broader<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#broader</p>
+  <div class="comment">
+   <span class="markdown">Broader concepts are typically rendered as parents in a concept hierarchy (tree).</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Relates a concept to a concept that is more general in meaning.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broaderTransitive" title="http://www.w3.org/2004/02/skos/core#broaderTransitive">broader Transitive</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broadMatch" title="http://www.w3.org/2004/02/skos/core#broadMatch">broad Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+  <h3>broader Transitive<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#broaderTransitive</p>
+  <div class="comment">
+   <span class="markdown">skos:broaderTransitive is a transitive superproperty of skos:broader.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#semanticRelation" title="http://www.w3.org/2004/02/skos/core#semanticRelation">semantic Relation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#narrowerTransitive" title="http://www.w3.org/2004/02/skos/core#narrowerTransitive">narrower Transitive</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#closeMatch">
+  <h3>close Match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#closeMatch</p>
+  <div class="comment">
+   <span class="markdown">skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> symmetric</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#mappingRelation" title="http://www.w3.org/2004/02/skos/core#mappingRelation">mapping Relation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#exactMatch" title="http://www.w3.org/2004/02/skos/core#exactMatch">exact Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="connectsTo">
+  <h3>connects to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#P67_refers_to" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to">P67 refers to</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#exactMatch">
+  <h3>exact Match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#exactMatch</p>
+  <div class="comment">
+   <span class="markdown">skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> symmetric, transitive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#closeMatch" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+  <h3>has Top Concept<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#hasTopConcept</p>
+  <div class="comment">
+   <span class="markdown">Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
+  <h3>in Scheme<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
+  <div class="comment">
+   <span class="markdown">Relates a resource (for example a concept) to a concept scheme in which it is included.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#mappingRelation">
+  <h3>mapping Relation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#mappingRelation</p>
+  <div class="comment">
+   <span class="markdown">These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Relates two concepts coming, by convention, from different schemes, and that have comparable meanings</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#semanticRelation" title="http://www.w3.org/2004/02/skos/core#semanticRelation">semantic Relation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broadMatch" title="http://www.w3.org/2004/02/skos/core#broadMatch">broad Match</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#closeMatch" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#narrowMatch" title="http://www.w3.org/2004/02/skos/core#narrowMatch">narrow Match</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#relatedMatch" title="http://www.w3.org/2004/02/skos/core#relatedMatch">related Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#member">
+  <h3>member<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#member</p>
+  <div class="comment">
+   <span class="markdown">Relates a collection to one of its members.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Collection" title="http://www.w3.org/2004/02/skos/core#Collection">Collection</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Collection" title="http://www.w3.org/2004/02/skos/core#Collection">Collection</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#memberList">
+  <h3>member List<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#memberList</p>
+  <div class="comment">
+   <span class="markdown">For any resource, every item in the list given as the value of the skos:memberList property is also a value of the skos:member property.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Relates an ordered collection to the RDF list containing its members.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#OrderedCollection" title="http://www.w3.org/2004/02/skos/core#OrderedCollection">Ordered Collection</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#List" target="_blank" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">List</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="mentions">
+  <h3>mentions<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#P67_refers_to" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to">P67 refers to</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#E31_Document" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">E31 Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#narrowMatch">
+  <h3>narrow Match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#narrowMatch</p>
+  <div class="comment">
+   <span class="markdown">skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#mappingRelation" title="http://www.w3.org/2004/02/skos/core#mappingRelation">mapping Relation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broadMatch" title="http://www.w3.org/2004/02/skos/core#broadMatch">broad Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#narrower">
+  <h3>narrower<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#narrower</p>
+  <div class="comment">
+   <span class="markdown">Narrower concepts are typically rendered as children in a concept hierarchy (tree).</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Relates a concept to a concept that is more specific in meaning.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#narrowerTransitive" title="http://www.w3.org/2004/02/skos/core#narrowerTransitive">narrower Transitive</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#narrowMatch" title="http://www.w3.org/2004/02/skos/core#narrowMatch">narrow Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#narrowerTransitive">
+  <h3>narrower Transitive<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#narrowerTransitive</p>
+  <div class="comment">
+   <span class="markdown">skos:narrowerTransitive is a transitive superproperty of skos:narrower.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#semanticRelation" title="http://www.w3.org/2004/02/skos/core#semanticRelation">semantic Relation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broaderTransitive" title="http://www.w3.org/2004/02/skos/core#broaderTransitive">broader Transitive</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="P129_isAbout">
+  <h3>P129 is About<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#E89_Propositional_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">E89 Propositional Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#E1_CRM_Entity" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity">E1 CRM Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="P165_incorporates">
+  <h3>P165 incorporates<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#E89_Propositional_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">E89 Propositional Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#E90_Symbolic_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object">E90 Symbolic Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="P46_IsComposedOf">
+  <h3>P46 is composed of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#E18_Physical_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing">E18 Physical Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#E18_Physical_Thing" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing">E18 Physical Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="P67_refers_to">
+  <h3>P67 refers to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#connectsTo" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo">connects to</a> <sup class="type-op" title="object property">op</sup>, <a href="#mentions" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions">mentions</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#E89_Propositional_Object" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">E89 Propositional Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#E1_CRM_Entity" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity">E1 CRM Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#related">
+  <h3>related<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#related</p>
+  <div class="comment">
+   <span class="markdown">skos:related is disjoint with skos:broaderTransitive</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Relates a concept to a concept with which there is an associative semantic relationship.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> symmetric</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#semanticRelation" title="http://www.w3.org/2004/02/skos/core#semanticRelation">semantic Relation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#relatedMatch" title="http://www.w3.org/2004/02/skos/core#relatedMatch">related Match</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#relatedMatch">
+  <h3>related Match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#relatedMatch</p>
+  <div class="comment">
+   <span class="markdown">skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> symmetric</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#mappingRelation" title="http://www.w3.org/2004/02/skos/core#mappingRelation">mapping Relation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">related</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#semanticRelation">
+  <h3>semantic Relation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#semanticRelation</p>
+  <div class="comment">
+   <span class="markdown">Links a concept to a concept related by meaning.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#broaderTransitive" title="http://www.w3.org/2004/02/skos/core#broaderTransitive">broader Transitive</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#mappingRelation" title="http://www.w3.org/2004/02/skos/core#mappingRelation">mapping Relation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#narrowerTransitive" title="http://www.w3.org/2004/02/skos/core#narrowerTransitive">narrower Transitive</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">related</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#topConceptOf">
+  <h3>top Concept Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#topConceptOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a concept to the concept scheme that it is a top level concept of.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#format" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#format">format</a></li>
+  <li><a href="#heightMeters" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#heightMeters">height Meters</a></li>
+  <li><a href="#Link" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Link">Link</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation"> <span>notation</span> </a></li>
+  <li><a href="#rockType" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType">rock Type</a></li>
+  <li><a href="#usagetypeArtefacts" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeArtefacts">usagetype Artefacts</a></li>
+  <li><a href="#usagetypeMegalithism" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism">usagetype Megalithism</a></li>
+ </ul>
+ <div class="entity" id="format">
+  <h3>format<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#format</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MegalithicMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument">Megalithic Monument</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="heightMeters">
+  <h3>height Meters<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#heightMeters</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Link">
+  <h3>Link<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#Link</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Audio" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio">Audio</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#Image" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image">Image</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#Narrative" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative">Narrative</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#notation">
+  <h3>notation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#notation</p>
+  <div class="comment">
+   <span class="markdown">A notation, also known as classification code, is a string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="rockType">
+  <h3>rock Type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MegalithicMonument" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument">Megalithic Monument</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usagetypeArtefacts">
+  <h3>usagetype Artefacts<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeArtefacts</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usagetypeMegalithism">
+  <h3>usagetype Megalithism<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Anger" title="http://www.w3.org/2004/02/skos/core#Anger">Anger</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Appreciation" title="http://www.w3.org/2004/02/skos/core#Appreciation">Appreciation</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Awe" title="http://www.w3.org/2004/02/skos/core#Awe">Awe</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions" title="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">Civic and Ethical Emotions</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Collective_Belonging" title="http://www.w3.org/2004/02/skos/core#Collective_Belonging">Collective belonging</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression" title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Cultural_Well-being" title="http://www.w3.org/2004/02/skos/core#Cultural_Well-being">Cultural well-being</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions" title="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">Difficult and Conflictual Emotions</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection" title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Emotional_Well-being" title="http://www.w3.org/2004/02/skos/core#Emotional_Well-being">Emotional well-being</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences" title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Environmental_Well-being" title="http://www.w3.org/2004/02/skos/core#Environmental_Well-being">Environmental well-being</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Hearing" title="http://www.w3.org/2004/02/skos/core#Hearing">Hearing</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Identity_and_Belonging" title="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">Identity and Belonging</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Injustice_Indignation" title="http://www.w3.org/2004/02/skos/core#Injustice_Indignation">Injustice/Indignation</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Intellectual_Well-being" title="http://www.w3.org/2004/02/skos/core#Intellectual_Well-being">Intellectual well-being</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being" title="http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being">Interpersonal well-being</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Loss/Grief" title="http://www.w3.org/2004/02/skos/core#Loss/Grief">Loss/Grief</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Narrating" title="http://www.w3.org/2004/02/skos/core#Narrating">Narrating</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Nostalgia" title="http://www.w3.org/2004/02/skos/core#Nostalgia">Nostalgia</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Performing" title="http://www.w3.org/2004/02/skos/core#Performing">Performing</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Pride" title="http://www.w3.org/2004/02/skos/core#Pride">Pride</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Respect" title="http://www.w3.org/2004/02/skos/core#Respect">Respect</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship" title="http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship">Responsibility/Stewardship</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Ritualizing" title="http://www.w3.org/2004/02/skos/core#Ritualizing">Ritualizing</a></li>
+  <li><a href="#S1_Cromeleque_das_Fontaínhas" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas"> <span>S1 Cromeleque das Fontaínhas</span> </a></li>
+  <li><a href="#S1_ImgFont1_Environment" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment"> <span>S1 Img Font1 Environment</span> </a></li>
+  <li><a href="#S1_NrtFont1" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1"> <span>S1 Nrt Font1</span> </a></li>
+  <li><a href="#S1_TextFont1" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_TextFont1"> <span>S1 Text Font1</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Seeing" title="http://www.w3.org/2004/02/skos/core#Seeing">Seeing</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Self-perception" title="http://www.w3.org/2004/02/skos/core#Self-perception">Self-perception</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Smelling" title="http://www.w3.org/2004/02/skos/core#Smelling">Smelling</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Spiritual_Well-being" title="http://www.w3.org/2004/02/skos/core#Spiritual_Well-being">Spiritual well-being</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Tasting" title="http://www.w3.org/2004/02/skos/core#Tasting">Tasting</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Touching" title="http://www.w3.org/2004/02/skos/core#Touching">Touching</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Value_Alignment" title="http://www.w3.org/2004/02/skos/core#Value_Alignment">Value alignment</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Visualizing" title="http://www.w3.org/2004/02/skos/core#Visualizing">Visualizing</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Anger">
+  <h3>Anger<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Anger</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions" title="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">Difficult and Conflictual Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Anger"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Appreciation">
+  <h3>Appreciation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Appreciation</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Appreciation"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Awe">
+  <h3>Awe<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Awe</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Awe"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">
+  <h3>Civic and Ethical Emotions<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection" title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Civic and Ethical Emotions"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Collective_Belonging">
+  <h3>Collective belonging<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Collective_Belonging</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Identity_and_Belonging" title="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">Identity and Belonging</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Collective belonging"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">
+  <h3>Commemorative and Elevating Emotions<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection" title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Commemorative and Elevating Emotions"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Cultural_Expression">
+  <h3>Cultural Expression<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Cultural_Expression</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences" title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cultural Expression"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Cultural_Well-being">
+  <h3>Cultural well-being<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Cultural_Well-being</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Inclusion"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cultural well-being"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">
+  <h3>Difficult and Conflictual Emotions<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection" title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Difficult and Conflictual Emotions"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Emotional_Connection">
+  <h3>Emotional Connection<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Emotional_Connection</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences" title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Emotional Connection"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Emotional_Well-being">
+  <h3>Emotional well-being<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Emotional_Well-being</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Peace"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Stress-relief"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Emotional well-being"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">
+  <h3>Emotions and Experiences<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Emotions and Experiences"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Environmental_Well-being">
+  <h3>Environmental well-being<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Environmental_Well-being</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Safety"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Environmental well-being"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Hearing">
+  <h3>Hearing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Hearing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Auditory perception"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Hearing"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">
+  <h3>Identity and Belonging<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Identity_and_Belonging</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences" title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Identity and Belonging"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Injustice_Indignation">
+  <h3>Injustice/Indignation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Injustice_Indignation</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions" title="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">Civic and Ethical Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Injustice/Indignation"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Intellectual_Well-being">
+  <h3>Intellectual well-being<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Intellectual_Well-being</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Curiosity"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Intellectual well-being"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being">
+  <h3>Interpersonal well-being<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Connectedness"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Interpersonal well-being"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Loss/Grief">
+  <h3>Loss/Grief<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Loss/Grief</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions" title="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">Difficult and Conflictual Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Loss/Grief"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Narrating">
+  <h3>Narrating<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Narrating</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression" title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Oral history"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Storytelling"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Narrating"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Nostalgia">
+  <h3>Nostalgia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Nostalgia</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Nostalgia"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Performing">
+  <h3>Performing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Performing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression" title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Dance"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Music"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Theatre"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Performing"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Pride">
+  <h3>Pride<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Pride</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Pride"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Respect">
+  <h3>Respect<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Respect</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions" title="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">Commemorative and Elevating Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Respect"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship">
+  <h3>Responsibility/Stewardship<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions" title="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">Civic and Ethical Emotions</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Responsibility/Stewardship"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Ritualizing">
+  <h3>Ritualizing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Ritualizing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression" title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Customs"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Festivals"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Ritualizing"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="S1_Cromeleque_das_Fontaínhas">
+  <h3>S1 Cromeleque das Fontaínhas<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#StoneCircleOrCromlech" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech">Stone Circle Or Cromlech</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#format" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#format">format</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"HorseShoe_Shape"</span>
+   </dd>
+   <dd>
+    <a href="#rockType" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType">rock Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Granite"</span>
+   </dd>
+   <dd>
+    <a href="#usagetypeMegalithism" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism">usagetype Megalithism</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Non-Funerary"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="S1_ImgFont1_Environment">
+  <h3>S1 Img Font1 Environment<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Image" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image">Image</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="S1_NrtFont1">
+  <h3>S1 Nrt Font1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Narrative" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative">Narrative</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="S1_TextFont1">
+  <h3>S1 Text Font1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_TextFont1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Text" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Text">Text</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#P129_isAbout" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout">P129 is About</a> <sup class="type-op" title="object property">op</sup> <a href="#S1_Cromeleque_das_Fontaínhas" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas">S1 Cromeleque das Fontaínhas</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#P165_incorporates" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates">P165 incorporates</a> <sup class="type-op" title="object property">op</sup> <a href="#S1_NrtFont1" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1">S1 Nrt Font1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Seeing">
+  <h3>Seeing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Seeing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Visual perception"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Seeing"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Self-perception">
+  <h3>Self-perception<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Self-perception</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Identity_and_Belonging" title="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">Identity and Belonging</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Self-perception"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Sensory_Experience">
+  <h3>Sensory Experience<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Sensory_Experience</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences" title="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">Emotions and Experiences</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Sensory Experience"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Smelling">
+  <h3>Smelling<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Smelling</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Olfactory perception"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Smelling"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Spiritual_Well-being">
+  <h3>Spiritual well-being<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Spiritual_Well-being</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Well-being" title="http://www.w3.org/2004/02/skos/core#Well-being">Well-being</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Purpose"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Spiritual well-being"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Tasting">
+  <h3>Tasting<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Tasting</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Gustatory perception"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Tasting"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Touching">
+  <h3>Touching<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Touching</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Sensory_Experience" title="http://www.w3.org/2004/02/skos/core#Sensory_Experience">Sensory Experience</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Bodily/Tactile perception"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Touching"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Value_Alignment">
+  <h3>Value alignment<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Value_Alignment</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Identity_and_Belonging" title="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">Identity and Belonging</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Value alignment"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Visualizing">
+  <h3>Visualizing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Visualizing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Cultural_Expression" title="http://www.w3.org/2004/02/skos/core#Cultural_Expression">Cultural Expression</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Architecture"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Art"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Visualizing"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#Well-being">
+  <h3>Well-being<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Well-being</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Intangible_Feature" title="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">Intangible Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept(Intangible Feature)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.w3.org/2004/02/skos/core#Emotional_Connection" title="http://www.w3.org/2004/02/skos/core#Emotional_Connection">Emotional Connection</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Well-being"@en</span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

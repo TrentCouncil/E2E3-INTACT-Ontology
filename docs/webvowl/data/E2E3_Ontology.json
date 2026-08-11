@@ -1,0 +1,3218 @@
+{
+  "_comment": "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org [Additional Information added by WebVOWL Exporter Version: 1.1.7]",
+  "header": {
+    "languages": [
+      "undefined",
+      "en"
+    ],
+    "baseIris": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+      "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "http://www.w3.org/2002/07/owl",
+      "http://www.w3.org/2000/01/rdf-schema",
+      "http://www.w3.org/2001/XMLSchema",
+      "http://www.w3.org/2004/02/skos/core"
+    ],
+    "prefixList": {
+      "E2E3-ontology": "http://www.semanticweb.org/int-act-project/E2E3-ontology#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "terms": "http://purl.org/dc/terms/",
+      "int-act-ontology": "http://www.semanticweb.org/int-act-project/int-act-ontology#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "": "http://www.semanticweb.org/diniz/ontologies/2024/8/untitled-ontology-30#",
+      "untitled-ontology-30": "http://www.semanticweb.org/diniz/ontologies/2024/8/untitled-ontology-30#",
+      "xml": "http://www.w3.org/XML/1998/namespace",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "title": {
+      "undefined": "E2E3 INT-ACT Ontology"
+    },
+    "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+    "author": [
+      "INT-ACT UÉvora Team"
+    ],
+    "comments": {
+      "undefined": "This ontology reuses and integrates the SKOS (Simple Knowledge Organization System) vocabulary for the organisation of domain-specific concepts, and builds upon the CIDOC Conceptual Reference Model (CRM) for the representation of cultural heritage entities and events."
+    },
+    "other": {
+      "license": [
+        {
+          "identifier": "license",
+          "language": "undefined",
+          "value": "https://creativecommons.org/licenses/by/4.0/",
+          "type": "iri"
+        }
+      ],
+      "creator": [
+        {
+          "identifier": "creator",
+          "language": "undefined",
+          "value": "INT-ACT UÉvora Team",
+          "type": "label"
+        }
+      ],
+      "title": [
+        {
+          "identifier": "title",
+          "language": "undefined",
+          "value": "E2E3 INT-ACT Ontology",
+          "type": "label"
+        }
+      ]
+    }
+  },
+  "namespace": [],
+  "settings": {
+    "global": {
+      "zoom": "0.54",
+      "translation": [
+        305.32,
+        -40.18
+      ],
+      "paused": false
+    },
+    "gravity": {
+      "classDistance": 200,
+      "datatypeDistance": 120
+    },
+    "filter": {
+      "checkBox": [
+        {
+          "id": "datatypeFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "objectPropertyFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "subclassFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "disjointFilterCheckbox",
+          "checked": true
+        },
+        {
+          "id": "setoperatorFilterCheckbox",
+          "checked": false
+        }
+      ],
+      "degreeSliderValue": "0"
+    },
+    "modes": {
+      "checkBox": [
+        {
+          "id": "pickandpinModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "nodescalingModuleCheckbox",
+          "checked": true
+        },
+        {
+          "id": "compactnotationModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "colorexternalsModuleCheckbox",
+          "checked": true
+        }
+      ],
+      "colorSwitchState": false
+    }
+  },
+  "class": [
+    {
+      "id": "9",
+      "type": "owl:Class"
+    },
+    {
+      "id": "11",
+      "type": "owl:Class"
+    },
+    {
+      "id": "4",
+      "type": "owl:Class"
+    },
+    {
+      "id": "16",
+      "type": "owl:Class"
+    },
+    {
+      "id": "21",
+      "type": "owl:Class"
+    },
+    {
+      "id": "23",
+      "type": "owl:Class"
+    },
+    {
+      "id": "25",
+      "type": "owl:Class"
+    },
+    {
+      "id": "26",
+      "type": "owl:Class"
+    },
+    {
+      "id": "41",
+      "type": "owl:Class"
+    },
+    {
+      "id": "10",
+      "type": "owl:Class"
+    },
+    {
+      "id": "52",
+      "type": "owl:Class"
+    },
+    {
+      "id": "57",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "58",
+      "type": "owl:Class"
+    },
+    {
+      "id": "60",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "71",
+      "type": "owl:Class"
+    },
+    {
+      "id": "24",
+      "type": "owl:Class"
+    },
+    {
+      "id": "12",
+      "type": "owl:Class"
+    },
+    {
+      "id": "13",
+      "type": "owl:Class"
+    },
+    {
+      "id": "2",
+      "type": "owl:Class"
+    },
+    {
+      "id": "22",
+      "type": "owl:Class"
+    },
+    {
+      "id": "59",
+      "type": "owl:Class"
+    },
+    {
+      "id": "34",
+      "type": "owl:Class"
+    },
+    {
+      "id": "72",
+      "type": "owl:Class"
+    },
+    {
+      "id": "40",
+      "type": "owl:Class"
+    },
+    {
+      "id": "51",
+      "type": "owl:Class"
+    },
+    {
+      "id": "1",
+      "type": "owl:Class"
+    },
+    {
+      "id": "18",
+      "type": "owl:Class"
+    },
+    {
+      "id": "64",
+      "type": "owl:Class"
+    },
+    {
+      "id": "73",
+      "type": "owl:Class"
+    },
+    {
+      "id": "19",
+      "type": "owl:Class"
+    },
+    {
+      "id": "35",
+      "type": "owl:Class"
+    },
+    {
+      "id": "70",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "17",
+      "type": "owl:Class"
+    },
+    {
+      "id": "92",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "15",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "93",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "85",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "90",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "28",
+      "type": "owl:Thing"
+    },
+    {
+      "id": "63",
+      "type": "owl:Thing"
+    },
+    {
+      "id": "96",
+      "type": "owl:unionOf"
+    },
+    {
+      "id": "39",
+      "type": "owl:Class"
+    },
+    {
+      "id": "20",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "9",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "StoneCircleOrCromlech",
+        "en": "Stone Circle Or Cromlech"
+      },
+      "comment": {
+        "undefined": "An arrangement of standing stones (menhirs) placed by humans."
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas",
+          "labels": {
+            "IRI-based": "S1_Cromeleque_das_Fontaínhas"
+          }
+        }
+      ],
+      "pos": [
+        2178.53,
+        1561.5
+      ]
+    },
+    {
+      "id": "11",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E55_Type",
+        "en": "E55 Type"
+      },
+      "pos": [
+        1776.64,
+        716.89
+      ]
+    },
+    {
+      "id": "4",
+      "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "Concept",
+        "undefined": "Concept(Intangible Feature)"
+      },
+      "attributes": [
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "An idea or notion; a unit of thought.",
+            "type": "label"
+          }
+        ]
+      },
+      "individuals": [
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Ritualizing",
+          "labels": {
+            "IRI-based": "Ritualizing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Tasting",
+          "labels": {
+            "IRI-based": "Tasting"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Narrating",
+          "labels": {
+            "IRI-based": "Narrating"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship",
+          "labels": {
+            "IRI-based": "Responsibility_Stewardship"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Self-perception",
+          "labels": {
+            "IRI-based": "Self-perception"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Cultural_Expression",
+          "labels": {
+            "IRI-based": "Cultural_Expression"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Anger",
+          "labels": {
+            "IRI-based": "Anger"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Awe",
+          "labels": {
+            "IRI-based": "Awe"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Environmental_Well-being",
+          "labels": {
+            "IRI-based": "Environmental_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions",
+          "labels": {
+            "IRI-based": "Difficult_and_Conflictual_Emotions"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Sensory_Experience",
+          "labels": {
+            "IRI-based": "Sensory_Experience"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Respect",
+          "labels": {
+            "IRI-based": "Respect"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Spiritual_Well-being",
+          "labels": {
+            "IRI-based": "Spiritual_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions",
+          "labels": {
+            "IRI-based": "Civic_and_Ethical_Emotions"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Identity_and_Belonging",
+          "labels": {
+            "IRI-based": "Identity_and_Belonging"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Appreciation",
+          "labels": {
+            "IRI-based": "Appreciation"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Hearing",
+          "labels": {
+            "IRI-based": "Hearing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Collective_Belonging",
+          "labels": {
+            "IRI-based": "Collective_Belonging"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Loss/Grief",
+          "labels": {
+            "IRI-based": "Loss/Grief"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Seeing",
+          "labels": {
+            "IRI-based": "Seeing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Intellectual_Well-being",
+          "labels": {
+            "IRI-based": "Intellectual_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Injustice_Indignation",
+          "labels": {
+            "IRI-based": "Injustice_Indignation"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Emotional_Connection",
+          "labels": {
+            "IRI-based": "Emotional_Connection"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Performing",
+          "labels": {
+            "IRI-based": "Performing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Emotional_Well-being",
+          "labels": {
+            "IRI-based": "Emotional_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions",
+          "labels": {
+            "IRI-based": "Commemorative_and_Elevating_Emotions"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences",
+          "labels": {
+            "IRI-based": "Emotions_and_Experiences"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Well-being",
+          "labels": {
+            "IRI-based": "Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Nostalgia",
+          "labels": {
+            "IRI-based": "Nostalgia"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Pride",
+          "labels": {
+            "IRI-based": "Pride"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being",
+          "labels": {
+            "IRI-based": "Interpersonal_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Touching",
+          "labels": {
+            "IRI-based": "Touching"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Visualizing",
+          "labels": {
+            "IRI-based": "Visualizing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Smelling",
+          "labels": {
+            "IRI-based": "Smelling"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Cultural_Well-being",
+          "labels": {
+            "IRI-based": "Cultural_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Value_Alignment",
+          "labels": {
+            "IRI-based": "Value_Alignment"
+          }
+        }
+      ],
+      "pos": [
+        -27.76,
+        807.28
+      ]
+    },
+    {
+      "id": "16",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E71_Human-Made_Thing",
+        "en": "E71 Human Made Thing"
+      },
+      "pos": [
+        2045.48,
+        -14.75
+      ]
+    },
+    {
+      "id": "21",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Narrative",
+        "en": "Narrative"
+      },
+      "comment": {
+        "undefined": "A story/saying that transmits meaning, sentiments and significant memories of a specific place"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1",
+          "labels": {
+            "IRI-based": "S1_NrtFont1"
+          }
+        }
+      ],
+      "pos": [
+        540.88,
+        1187.9
+      ]
+    },
+    {
+      "id": "23",
+      "iri": "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "OrderedCollection"
+      },
+      "attributes": [
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "An ordered collection of concepts, where both the grouping and the ordering are meaningful.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'.",
+            "type": "label"
+          }
+        ]
+      },
+      "pos": [
+        -425.3,
+        1087.59
+      ]
+    },
+    {
+      "id": "25",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E18_Physical_Thing",
+        "en": "E18 Physical Thing"
+      },
+      "pos": [
+        1396.35,
+        -166.4
+      ]
+    },
+    {
+      "id": "26",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#3DModel",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "3DModel",
+        "en": "3D Model"
+      },
+      "comment": {
+        "undefined": "3D model files"
+      },
+      "pos": [
+        969.94,
+        1161.97
+      ]
+    },
+    {
+      "id": "41",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Video",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Video",
+        "en": "Video"
+      },
+      "comment": {
+        "undefined": "Video files"
+      },
+      "pos": [
+        927.97,
+        1542.29
+      ]
+    },
+    {
+      "id": "10",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "MegalithicMonument",
+        "en": "Megalithic Monument"
+      },
+      "comment": {
+        "undefined": "An archaeological monument built with standing megalithic stones"
+      },
+      "pos": [
+        2166.04,
+        1186.3
+      ]
+    },
+    {
+      "id": "52",
+      "iri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+      "baseIri": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+      "label": {
+        "IRI-based": "List"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -480.08,
+        740.42
+      ]
+    },
+    {
+      "id": "57",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        380.71,
+        -549.47
+      ]
+    },
+    {
+      "id": "58",
+      "attributes": [
+        "union",
+        "anonymous"
+      ],
+      "pos": [
+        601.66,
+        1608.6
+      ]
+    },
+    {
+      "id": "60",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        535.33,
+        -145.03
+      ]
+    },
+    {
+      "id": "71",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Roll_up",
+        "en": "Roll up"
+      },
+      "comment": {
+        "undefined": "Roll ups of the exhibition"
+      },
+      "pos": [
+        1435.96,
+        1742.59
+      ]
+    },
+    {
+      "id": "24",
+      "iri": "http://www.w3.org/2004/02/skos/core#Collection",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "Collection"
+      },
+      "attributes": [
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "A meaningful collection of concepts.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy.",
+            "type": "label"
+          }
+        ]
+      },
+      "pos": [
+        -257.97,
+        1412.09
+      ]
+    },
+    {
+      "id": "12",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E1_CRM_Entity",
+        "en": "E1 CRM Entity"
+      },
+      "pos": [
+        1887.86,
+        259.07
+      ]
+    },
+    {
+      "id": "13",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Intangible_Feature",
+        "undefined": "Intangible Feature"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Ritualizing",
+          "labels": {
+            "IRI-based": "Ritualizing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Tasting",
+          "labels": {
+            "IRI-based": "Tasting"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Narrating",
+          "labels": {
+            "IRI-based": "Narrating"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Self-perception",
+          "labels": {
+            "IRI-based": "Self-perception"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship",
+          "labels": {
+            "IRI-based": "Responsibility_Stewardship"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Cultural_Expression",
+          "labels": {
+            "IRI-based": "Cultural_Expression"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Anger",
+          "labels": {
+            "IRI-based": "Anger"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Awe",
+          "labels": {
+            "IRI-based": "Awe"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Environmental_Well-being",
+          "labels": {
+            "IRI-based": "Environmental_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions",
+          "labels": {
+            "IRI-based": "Difficult_and_Conflictual_Emotions"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Sensory_Experience",
+          "labels": {
+            "IRI-based": "Sensory_Experience"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Respect",
+          "labels": {
+            "IRI-based": "Respect"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions",
+          "labels": {
+            "IRI-based": "Civic_and_Ethical_Emotions"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Spiritual_Well-being",
+          "labels": {
+            "IRI-based": "Spiritual_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Identity_and_Belonging",
+          "labels": {
+            "IRI-based": "Identity_and_Belonging"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Appreciation",
+          "labels": {
+            "IRI-based": "Appreciation"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Hearing",
+          "labels": {
+            "IRI-based": "Hearing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Collective_Belonging",
+          "labels": {
+            "IRI-based": "Collective_Belonging"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Loss/Grief",
+          "labels": {
+            "IRI-based": "Loss/Grief"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Intellectual_Well-being",
+          "labels": {
+            "IRI-based": "Intellectual_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Seeing",
+          "labels": {
+            "IRI-based": "Seeing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Injustice_Indignation",
+          "labels": {
+            "IRI-based": "Injustice_Indignation"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Emotional_Connection",
+          "labels": {
+            "IRI-based": "Emotional_Connection"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Emotional_Well-being",
+          "labels": {
+            "IRI-based": "Emotional_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions",
+          "labels": {
+            "IRI-based": "Commemorative_and_Elevating_Emotions"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Performing",
+          "labels": {
+            "IRI-based": "Performing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences",
+          "labels": {
+            "IRI-based": "Emotions_and_Experiences"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Well-being",
+          "labels": {
+            "IRI-based": "Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Nostalgia",
+          "labels": {
+            "IRI-based": "Nostalgia"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being",
+          "labels": {
+            "IRI-based": "Interpersonal_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Touching",
+          "labels": {
+            "IRI-based": "Touching"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Pride",
+          "labels": {
+            "IRI-based": "Pride"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Visualizing",
+          "labels": {
+            "IRI-based": "Visualizing"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Smelling",
+          "labels": {
+            "IRI-based": "Smelling"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Cultural_Well-being",
+          "labels": {
+            "IRI-based": "Cultural_Well-being"
+          }
+        },
+        {
+          "iri": "http://www.w3.org/2004/02/skos/core#Value_Alignment",
+          "labels": {
+            "IRI-based": "Value_Alignment"
+          }
+        }
+      ],
+      "pos": [
+        1603.99,
+        1161.42
+      ]
+    },
+    {
+      "id": "2",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E31_Document",
+        "en": "E31 Document"
+      },
+      "pos": [
+        1264.32,
+        1397.2
+      ]
+    },
+    {
+      "id": "22",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E33_Linguistic_Object",
+        "en": "E33 Linguistic Object"
+      },
+      "pos": [
+        772.86,
+        843.04
+      ]
+    },
+    {
+      "id": "59",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Image",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Image",
+        "en": "Image"
+      },
+      "comment": {
+        "undefined": "Image FIles"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment",
+          "labels": {
+            "IRI-based": "S1_ImgFont1_Environment"
+          }
+        }
+      ],
+      "pos": [
+        992.97,
+        1761.28
+      ]
+    },
+    {
+      "id": "34",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "ArchaeologicalMonument",
+        "en": "Archaeological Monument"
+      },
+      "comment": {
+        "undefined": "A monument that preserves traces of human occupation"
+      },
+      "pos": [
+        2215.46,
+        801.99
+      ]
+    },
+    {
+      "id": "72",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#App",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "App",
+        "en": "App"
+      },
+      "comment": {
+        "undefined": "A software application designed to guide or assist users, often in cultural or educational contexts"
+      },
+      "pos": [
+        892.64,
+        1333.09
+      ]
+    },
+    {
+      "id": "40",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E90_Symbolic_Object",
+        "en": "E90 Symbolic Object"
+      },
+      "pos": [
+        1480.98,
+        556.69
+      ]
+    },
+    {
+      "id": "51",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Interview",
+        "en": "Interview"
+      },
+      "comment": {
+        "undefined": "Conversations capturing personal or collective testimonies."
+      },
+      "pos": [
+        541.19,
+        566.58
+      ]
+    },
+    {
+      "id": "1",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Audio",
+        "en": "Audio"
+      },
+      "comment": {
+        "undefined": "Audio files"
+      },
+      "pos": [
+        965.42,
+        1679.62
+      ]
+    },
+    {
+      "id": "18",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Demonstrator",
+        "en": "Demonstrator"
+      },
+      "comment": {
+        "undefined": "A prototype or tool created to showcase a concept or functionality"
+      },
+      "pos": [
+        2035.49,
+        -385.79
+      ]
+    },
+    {
+      "id": "64",
+      "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "ConceptScheme"
+      },
+      "attributes": [
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "A concept scheme may be defined to include concepts from different sources.",
+            "type": "label"
+          }
+        ],
+        "example": [
+          {
+            "identifier": "example",
+            "language": "en",
+            "value": "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+            "type": "label"
+          }
+        ]
+      },
+      "pos": [
+        -139.08,
+        436.61
+      ]
+    },
+    {
+      "id": "73",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Text",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Text",
+        "en": "Text"
+      },
+      "comment": {
+        "undefined": "The written files of the interviews"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_TextFont1",
+          "labels": {
+            "IRI-based": "S1_TextFont1"
+          }
+        }
+      ],
+      "pos": [
+        1153.2,
+        1037.37
+      ]
+    },
+    {
+      "id": "19",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E89_Propositional_Object",
+        "en": "E89 Propositional Object"
+      },
+      "pos": [
+        1844.09,
+        374.68
+      ]
+    },
+    {
+      "id": "35",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "CulturalHeritageMonument",
+        "en": "Cultural Heritage Monument"
+      },
+      "pos": [
+        2004.96,
+        468
+      ]
+    },
+    {
+      "id": "70",
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "string"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        764.31,
+        -193.74
+      ]
+    },
+    {
+      "id": "17",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E70_Thing",
+        "en": "E70 Thing"
+      },
+      "pos": [
+        1738.77,
+        -141.14
+      ]
+    },
+    {
+      "id": "92",
+      "iri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "anyURI"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        385.87,
+        1737.69
+      ]
+    },
+    {
+      "id": "15",
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "string"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        2027.68,
+        1394.45
+      ]
+    },
+    {
+      "id": "93",
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "string"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        563.14,
+        -681.96
+      ]
+    },
+    {
+      "id": "85",
+      "iri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "decimal"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        356.65,
+        -329.14
+      ]
+    },
+    {
+      "id": "90",
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "string"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        2401.33,
+        1199.6
+      ]
+    },
+    {
+      "id": "28",
+      "iri": "http://www.w3.org/2002/07/owl#Thing",
+      "baseIri": "http://owl2vowl.de",
+      "label": {
+        "undefined": "Thing"
+      },
+      "pos": [
+        619.55,
+        -417.13
+      ]
+    },
+    {
+      "id": "63",
+      "iri": "http://www.w3.org/2002/07/owl#Thing",
+      "baseIri": "http://owl2vowl.de",
+      "label": {
+        "undefined": "Thing"
+      },
+      "pos": [
+        -270.02,
+        141.91
+      ]
+    },
+    {
+      "id": "96",
+      "attributes": [
+        "union",
+        "anonymous"
+      ],
+      "pos": [
+        -13.21,
+        1212.03
+      ]
+    },
+    {
+      "id": "39",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E73_Information_Object",
+        "en": "E73 Information Object"
+      },
+      "pos": [
+        1198.12,
+        894.91
+      ]
+    },
+    {
+      "id": "20",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "E24_Physical_Human-Made_Thing",
+        "en": "E24 Physical Human Made Thing"
+      },
+      "pos": [
+        1692.55,
+        122.28
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "0",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "14",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "27",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "30",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "31",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "32",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "33",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "36",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "37",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "38",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "42",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "43",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "44",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "46",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "47",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "48",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "49",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "50",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "53",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "54",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "55",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "61",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "62",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "66",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "68",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "69",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "67",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "74",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "75",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "76",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "77",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "78",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "79",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "80",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "81",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "82",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "83",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "84",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "86",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "88",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "89",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "87",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "91",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "94",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "45",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "95",
+      "type": "owl:disjointWith"
+    },
+    {
+      "id": "65",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "97",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "56",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "29",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "98",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "99",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "100",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "101",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GENERATED-UNION-58-1-0",
+      "type": "setOperatorProperty"
+    },
+    {
+      "id": "GENERATED-UNION-58-59-1",
+      "type": "setOperatorProperty"
+    },
+    {
+      "id": "GENERATED-UNION-58-21-2",
+      "type": "setOperatorProperty"
+    },
+    {
+      "id": "GENERATED-UNION-96-24-0",
+      "type": "setOperatorProperty"
+    },
+    {
+      "id": "GENERATED-UNION-96-4-1",
+      "type": "setOperatorProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "0",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "1",
+      "range": "2",
+      "pos": [
+        1114.87,
+        1538.41
+      ]
+    },
+    {
+      "id": "3",
+      "iri": "http://www.w3.org/2004/02/skos/core#semanticRelation",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "semanticRelation"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Links a concept to a concept related by meaning.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "4",
+      "range": "4",
+      "subproperty": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "pos": [
+        77.76,
+        693.57
+      ]
+    },
+    {
+      "id": "14",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#format",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "format",
+        "en": "format"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "10",
+      "range": "15",
+      "pos": [
+        2086.35,
+        1306.19
+      ]
+    },
+    {
+      "id": "27",
+      "iri": "http://www.w3.org/2004/02/skos/core#narrower",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "narrower"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "en": "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
+      },
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates a concept to a concept that is more specific in meaning.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "subproperty": [
+        "29"
+      ],
+      "superproperty": [
+        "5"
+      ],
+      "inverse": "87",
+      "pos": [
+        768.46,
+        -349.97
+      ]
+    },
+    {
+      "id": "30",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "17",
+      "range": "12",
+      "pos": [
+        1813.32,
+        58.96
+      ]
+    },
+    {
+      "id": "31",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "11",
+      "range": "12",
+      "pos": [
+        1832.25,
+        487.98
+      ]
+    },
+    {
+      "id": "32",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "25",
+      "range": "17",
+      "pos": [
+        1567.56,
+        -153.77
+      ]
+    },
+    {
+      "id": "33",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "34",
+      "range": "35",
+      "pos": [
+        2110.21,
+        634.99
+      ]
+    },
+    {
+      "id": "36",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "23",
+      "range": "24",
+      "pos": [
+        -341.64,
+        1249.84
+      ]
+    },
+    {
+      "id": "37",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "16",
+      "range": "17",
+      "pos": [
+        1892.13,
+        -77.95
+      ]
+    },
+    {
+      "id": "38",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "39",
+      "range": "40",
+      "pos": [
+        1339.55,
+        725.8
+      ]
+    },
+    {
+      "id": "42",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "10",
+      "range": "34",
+      "pos": [
+        2190.75,
+        994.14
+      ]
+    },
+    {
+      "id": "43",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "40",
+      "range": "19",
+      "pos": [
+        1635.41,
+        423.19
+      ]
+    },
+    {
+      "id": "44",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "9",
+      "range": "10",
+      "pos": [
+        2172.11,
+        1368.63
+      ]
+    },
+    {
+      "id": "7",
+      "iri": "http://www.w3.org/2004/02/skos/core#related",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "related"
+      },
+      "attributes": [
+        "symmetric",
+        "object",
+        "external"
+      ],
+      "comment": {
+        "en": "skos:related is disjoint with skos:broaderTransitive"
+      },
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates a concept to a concept with which there is an associative semantic relationship.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "subproperty": [
+        "45"
+      ],
+      "superproperty": [
+        "3"
+      ],
+      "pos": [
+        481.53,
+        -321.61
+      ]
+    },
+    {
+      "id": "46",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "20",
+      "range": "16",
+      "pos": [
+        1869.01,
+        53.76
+      ]
+    },
+    {
+      "id": "47",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "19",
+      "range": "16",
+      "pos": [
+        1944.79,
+        179.97
+      ]
+    },
+    {
+      "id": "48",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "20",
+      "range": "25",
+      "pos": [
+        1544.45,
+        -22.06
+      ]
+    },
+    {
+      "id": "49",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "21",
+      "range": "22",
+      "pos": [
+        659.81,
+        1011.1
+      ]
+    },
+    {
+      "id": "50",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "51",
+      "range": "22",
+      "pos": [
+        657.03,
+        704.81
+      ]
+    },
+    {
+      "id": "53",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "18",
+      "range": "16",
+      "pos": [
+        2040.49,
+        -200.27
+      ]
+    },
+    {
+      "id": "54",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "13",
+      "range": "11",
+      "pos": [
+        1696.45,
+        923.36
+      ]
+    },
+    {
+      "id": "55",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "connectsTo",
+        "undefined": "connects to"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "2",
+      "range": "13",
+      "superproperty": [
+        "56"
+      ],
+      "pos": [
+        1430.69,
+        1299.69
+      ]
+    },
+    {
+      "id": "61",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "mentions"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "2",
+      "range": "13",
+      "superproperty": [
+        "56"
+      ],
+      "pos": [
+        1465.06,
+        1357.66
+      ]
+    },
+    {
+      "id": "62",
+      "iri": "http://www.w3.org/2004/02/skos/core#inScheme",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "inScheme"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates a resource (for example a concept) to a concept scheme in which it is included.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "A concept may be a member of more than one concept scheme.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "63",
+      "range": "64",
+      "subproperty": [
+        "65"
+      ],
+      "pos": [
+        -208.61,
+        280.12
+      ]
+    },
+    {
+      "id": "66",
+      "iri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "closeMatch"
+      },
+      "attributes": [
+        "symmetric",
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "subproperty": [
+        "67"
+      ],
+      "superproperty": [
+        "8"
+      ],
+      "pos": [
+        455.18,
+        -443.08
+      ]
+    },
+    {
+      "id": "68",
+      "iri": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "hasTopConcept"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "64",
+      "range": "4",
+      "inverse": "65",
+      "pos": [
+        -88.29,
+        605.72
+      ]
+    },
+    {
+      "id": "69",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeArtefacts",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "usagetypeArtefacts",
+        "en": "usagetype Artefacts"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "28",
+      "range": "70",
+      "pos": [
+        696.85,
+        -297.85
+      ]
+    },
+    {
+      "id": "67",
+      "iri": "http://www.w3.org/2004/02/skos/core#exactMatch",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "exactMatch"
+      },
+      "attributes": [
+        "transitive",
+        "symmetric",
+        "object",
+        "external"
+      ],
+      "comment": {
+        "en": "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
+      },
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "superproperty": [
+        "66"
+      ],
+      "pos": [
+        766.35,
+        -492.34
+      ]
+    },
+    {
+      "id": "74",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "35",
+      "range": "20",
+      "pos": [
+        1848.75,
+        295.14
+      ]
+    },
+    {
+      "id": "75",
+      "iri": "http://www.w3.org/2002/07/owl#topDataProperty",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "IRI-based": "topDataProperty"
+      },
+      "attributes": [
+        "datatype",
+        "external"
+      ],
+      "domain": "28",
+      "range": "60",
+      "pos": [
+        574.56,
+        -271.75
+      ]
+    },
+    {
+      "id": "76",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "41",
+      "range": "2",
+      "pos": [
+        1096.15,
+        1469.75
+      ]
+    },
+    {
+      "id": "77",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "71",
+      "range": "2",
+      "pos": [
+        1350.14,
+        1569.89
+      ]
+    },
+    {
+      "id": "78",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "22",
+      "range": "39",
+      "pos": [
+        985.49,
+        868.97
+      ]
+    },
+    {
+      "id": "79",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "2",
+      "range": "39",
+      "pos": [
+        1231.22,
+        1146.05
+      ]
+    },
+    {
+      "id": "80",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "72",
+      "range": "2",
+      "pos": [
+        1078.48,
+        1365.15
+      ]
+    },
+    {
+      "id": "81",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "26",
+      "range": "2",
+      "pos": [
+        1117.13,
+        1279.59
+      ]
+    },
+    {
+      "id": "82",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "73",
+      "range": "2",
+      "pos": [
+        1210.32,
+        1222.32
+      ]
+    },
+    {
+      "id": "83",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "59",
+      "range": "2",
+      "pos": [
+        1131.8,
+        1575.01
+      ]
+    },
+    {
+      "id": "84",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#heightMeters",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "heightMeters",
+        "en": "height Meters"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "28",
+      "range": "85",
+      "pos": [
+        488.82,
+        -373.38
+      ]
+    },
+    {
+      "id": "86",
+      "iri": "http://www.w3.org/2004/02/skos/core#broadMatch",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "broadMatch"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "superproperty": [
+        "87",
+        "8"
+      ],
+      "inverse": "29",
+      "pos": [
+        724.25,
+        -545.12
+      ]
+    },
+    {
+      "id": "6",
+      "iri": "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "broaderTransitive"
+      },
+      "attributes": [
+        "transitive",
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "undefined",
+            "value": "skos:broaderTransitive is a transitive superproperty of skos:broader.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "subproperty": [
+        "87"
+      ],
+      "superproperty": [
+        "3"
+      ],
+      "inverse": "5",
+      "pos": [
+        783.74,
+        -424.29
+      ]
+    },
+    {
+      "id": "88",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "P165_incorporates",
+        "en": "P165 incorporates"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "19",
+      "range": "40",
+      "pos": [
+        1667.81,
+        485.63
+      ]
+    },
+    {
+      "id": "89",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#rockType",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "rockType",
+        "en": "rock Type"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "10",
+      "range": "90",
+      "pos": [
+        2296.4,
+        1193.67
+      ]
+    },
+    {
+      "id": "87",
+      "iri": "http://www.w3.org/2004/02/skos/core#broader",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "broader"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "en": "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+      },
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates a concept to a concept that is more general in meaning.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "subproperty": [
+        "86"
+      ],
+      "superproperty": [
+        "6"
+      ],
+      "inverse": "27"
+    },
+    {
+      "id": "91",
+      "iri": "http://www.w3.org/2004/02/skos/core#notation",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "notation"
+      },
+      "attributes": [
+        "datatype",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "By convention, skos:notation is used with a typed literal in the object position of the triple.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "57",
+      "pos": [
+        496.03,
+        -485.57
+      ]
+    },
+    {
+      "id": "8",
+      "iri": "http://www.w3.org/2004/02/skos/core#mappingRelation",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "mappingRelation"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "en": "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
+      },
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "subproperty": [
+        "45",
+        "66",
+        "29",
+        "86"
+      ],
+      "superproperty": [
+        "3"
+      ],
+      "pos": [
+        526.8,
+        -278.72
+      ]
+    },
+    {
+      "id": "94",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#usagetypeMegalithism",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "usagetypeMegalithism",
+        "en": "usagetype Megalithism"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "28",
+      "range": "93",
+      "pos": [
+        589.29,
+        -559.22
+      ]
+    },
+    {
+      "id": "45",
+      "iri": "http://www.w3.org/2004/02/skos/core#relatedMatch",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "relatedMatch"
+      },
+      "attributes": [
+        "symmetric",
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "superproperty": [
+        "7",
+        "8"
+      ],
+      "pos": [
+        661.96,
+        -576.33
+      ]
+    },
+    {
+      "id": "95",
+      "label": "Disjoint With",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "24",
+      "range": "64"
+    },
+    {
+      "id": "65",
+      "iri": "http://www.w3.org/2004/02/skos/core#topConceptOf",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "topConceptOf"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates a concept to the concept scheme that it is a top level concept of.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "4",
+      "range": "64",
+      "superproperty": [
+        "62"
+      ],
+      "inverse": "68"
+    },
+    {
+      "id": "97",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "P129_isAbout",
+        "en": "P129 is About"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "19",
+      "range": "12",
+      "pos": [
+        2030.2,
+        366.66
+      ]
+    },
+    {
+      "id": "56",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "P67_refers_to",
+        "undefined": "P67 refers to"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "19",
+      "range": "12",
+      "subproperty": [
+        "61",
+        "55"
+      ],
+      "pos": [
+        2040.55,
+        303.41
+      ]
+    },
+    {
+      "id": "29",
+      "iri": "http://www.w3.org/2004/02/skos/core#narrowMatch",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "narrowMatch"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "superproperty": [
+        "27",
+        "8"
+      ],
+      "inverse": "86"
+    },
+    {
+      "id": "98",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Link",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "Link",
+        "en": "Link"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "58",
+      "range": "92",
+      "pos": [
+        480.67,
+        1680.98
+      ]
+    },
+    {
+      "id": "5",
+      "iri": "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "narrowerTransitive"
+      },
+      "attributes": [
+        "transitive",
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "undefined",
+            "value": "skos:narrowerTransitive is a transitive superproperty of skos:narrower.",
+            "type": "label"
+          }
+        ],
+        "scopeNote": [
+          {
+            "identifier": "scopeNote",
+            "language": "en",
+            "value": "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "28",
+      "range": "28",
+      "subproperty": [
+        "27"
+      ],
+      "superproperty": [
+        "3"
+      ],
+      "inverse": "6"
+    },
+    {
+      "id": "99",
+      "iri": "http://www.w3.org/2004/02/skos/core#memberList",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "memberList"
+      },
+      "attributes": [
+        "functional",
+        "object",
+        "external"
+      ],
+      "comment": {
+        "en": "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
+      },
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates an ordered collection to the RDF list containing its members.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "23",
+      "range": "52",
+      "pos": [
+        -452.69,
+        914
+      ]
+    },
+    {
+      "id": "100",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "P46_IsComposedOf",
+        "en": "P46 is composed of"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "25",
+      "range": "25",
+      "pos": [
+        1311.08,
+        -299.56
+      ]
+    },
+    {
+      "id": "101",
+      "iri": "http://www.w3.org/2004/02/skos/core#member",
+      "baseIri": "http://www.w3.org/2004/02/skos/core",
+      "label": {
+        "IRI-based": "member"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "annotations": {
+        "isDefinedBy": [
+          {
+            "identifier": "isDefinedBy",
+            "language": "undefined",
+            "value": "http://www.w3.org/2004/02/skos/core",
+            "type": "iri"
+          }
+        ],
+        "definition": [
+          {
+            "identifier": "definition",
+            "language": "en",
+            "value": "Relates a collection to one of its members.",
+            "type": "label"
+          }
+        ]
+      },
+      "domain": "24",
+      "range": "96",
+      "pos": [
+        -81.57,
+        1382.77
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-58-1-0",
+      "domain": "58",
+      "range": "1",
+      "pos": [
+        783.54,
+        1644.11
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-58-59-1",
+      "domain": "58",
+      "range": "59",
+      "pos": [
+        792.41,
+        1683.02
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-58-21-2",
+      "domain": "58",
+      "range": "21",
+      "pos": [
+        572.02,
+        1403.47
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-96-24-0",
+      "domain": "96",
+      "range": "24",
+      "pos": [
+        -171.38,
+        1268.69
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-96-4-1",
+      "domain": "96",
+      "range": "4",
+      "pos": [
+        -19.88,
+        1026.59
+      ]
+    }
+  ]
+}
