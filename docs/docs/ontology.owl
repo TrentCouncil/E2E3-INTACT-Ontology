@@ -1,0 +1,1454 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/int-act-project/E2E3-ontology#"
+     xml:base="http://www.semanticweb.org/int-act-project/E2E3-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:E2E3-ontology="http://www.semanticweb.org/int-act-project/E2E3-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology"/>
+        <terms:creator>INT-ACT UÉvora Team</terms:creator>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title>E2E3 INT-ACT Ontology</terms:title>
+        <rdfs:comment>This ontology reuses and integrates the SKOS (Simple Knowledge Organization System) vocabulary for the organisation of domain-specific concepts, and builds upon the CIDOC Conceptual Reference Model (CRM) for the representation of cultural heritage entities and events.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:comment xml:lang="en">The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">An alternative lexical label for a resource.</skos:definition>
+        <skos:example xml:lang="en">Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).</skos:example>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A note about a modification to a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">An example of the use of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+        <rdfs:comment xml:lang="en">The range of skos:hiddenLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations.</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A note about the past state/use/meaning of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A general note, for any purpose.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property may be used directly, or as a super-property for more specific note types.</skos:scopeNote>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:comment xml:lang="en">A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The range of skos:prefLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language.</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A note that helps to clarify the meaning and/or the use of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity"/>
+        <rdfs:label xml:lang="en">P129 is About</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object"/>
+        <rdfs:label xml:lang="en">P165 incorporates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing"/>
+        <rdfs:label xml:lang="en">P46 is composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity"/>
+        <rdfs:label>P67 refers to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdfs:label>connects to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <rdfs:comment xml:lang="en">Broader concepts are typically rendered as parents in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more general in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broaderTransitive -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition>skos:broaderTransitive is a transitive superproperty of skos:broader.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of &quot;compound errors&quot; when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates a resource (for example a concept) to a concept scheme in which it is included.</skos:definition>
+        <skos:scopeNote xml:lang="en">A concept may be a member of more than one concept scheme.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <rdfs:comment xml:lang="en">These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates two concepts coming, by convention, from different schemes, and that have comparable meanings</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#member -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#member">
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Collection"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates a collection to one of its members.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#memberList -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#memberList">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#OrderedCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+        <rdfs:comment xml:lang="en">For any resource, every item in the list given as the value of the
+      skos:memberList property is also a value of the skos:member property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates an ordered collection to the RDF list containing its members.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+        <rdfs:comment xml:lang="en">Narrower concepts are typically rendered as children in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more specific in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowerTransitive -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowerTransitive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition>skos:narrowerTransitive is a transitive superproperty of skos:narrower.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">skos:related is disjoint with skos:broaderTransitive</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates a concept to a concept with which there is an associative semantic relationship.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#semanticRelation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#semanticRelation">
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Links a concept to a concept related by meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">Relates a concept to the concept scheme that it is a top level concept of.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Link -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Link">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">Link</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A notation, also known as classification code, is a string of characters such as &quot;T58.5&quot; or &quot;303.4833&quot; used to uniquely identify a concept within the scope of a given concept scheme.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:notation is used with a typed literal in the object position of the triple.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature -->
+
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing"/>
+        <rdfs:label>E26 Physical Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#E27_Site -->
+
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#E27_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E26_Physical_Feature"/>
+        <rdfs:comment>This class comprises pieces of land or sea floor. In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps. Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location.</rdfs:comment>
+        <rdfs:label>E27 Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#App -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#App">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:comment>A software application designed to guide or assist users, often in cultural or educational contexts</rdfs:comment>
+        <rdfs:label xml:lang="en">App</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument"/>
+        <rdfs:comment>A monument that preserves traces of human occupation</rdfs:comment>
+        <rdfs:label xml:lang="en">Archaeological Monument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:comment>The area where traces of human occupation have been found.</rdfs:comment>
+        <rdfs:label>Archaeological Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:comment>Audio files</rdfs:comment>
+        <rdfs:label xml:lang="en">Audio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">Cultural Heritage Monument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:comment>A place of importance recognised for its historical and cultural value.</rdfs:comment>
+        <rdfs:label>Cultural Heritage Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Demonstrator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing"/>
+        <rdfs:comment>A prototype or tool created to showcase a concept or functionality</rdfs:comment>
+        <rdfs:label xml:lang="en">Demonstrator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing"/>
+        <rdfs:label xml:lang="en">E18 Physical Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity">
+        <rdfs:label xml:lang="en">E1 CRM Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E18_Physical_Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">E24 Physical Human Made Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object"/>
+        <rdfs:label xml:lang="en">E31 Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object"/>
+        <rdfs:label xml:lang="en">E33 Linguistic Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity"/>
+        <rdfs:label xml:lang="en">E55 Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E1_CRM_Entity"/>
+        <rdfs:label xml:lang="en">E70 Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing"/>
+        <rdfs:label xml:lang="en">E71 Human Made Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object"/>
+        <rdfs:label xml:lang="en">E73 Information Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing"/>
+        <rdfs:label xml:lang="en">E89 Propositional Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E89_Propositional_Object"/>
+        <rdfs:label xml:lang="en">E90 Symbolic Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Image -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:comment>Image FIles</rdfs:comment>
+        <rdfs:label xml:lang="en">Image</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type"/>
+        <rdfs:label>Intangible Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object"/>
+        <rdfs:comment>Conversations capturing personal or collective testimonies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interview</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument"/>
+        <rdfs:comment>An archaeological monument built with standing megalithic stones</rdfs:comment>
+        <rdfs:label xml:lang="en">Megalithic Monument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site"/>
+        <rdfs:comment>A specific geographical area where large stone monuments or constructions, like stones circles or standing stones, are located.</rdfs:comment>
+        <rdfs:label>Megalithic Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E33_Linguistic_Object"/>
+        <rdfs:comment>A story/saying that transmits meaning, sentiments and significant memories of a specific place</rdfs:comment>
+        <rdfs:label xml:lang="en">Narrative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:comment>Roll ups of the exhibition</rdfs:comment>
+        <rdfs:label xml:lang="en">Roll up</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:comment>A location where ancient religious or ceremonial/ritualistic practices were/are conducted.</rdfs:comment>
+        <rdfs:label>Spiritual Or Ritual Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#MegalithicMonument"/>
+        <rdfs:comment>An arrangement of standing stones (menhirs) placed by humans.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stone Circle Or Cromlech</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Text -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Text">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:comment>The written files of the interviews</rdfs:comment>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
+        <rdfs:label>A space open to visitors.</rdfs:label>
+        <rdfs:label>Touristic Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Video -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Video">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:comment>Video files</rdfs:comment>
+        <rdfs:label xml:lang="en">Video</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#3DModel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#3DModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
+        <rdfs:comment>3D model files</rdfs:comment>
+        <rdfs:label xml:lang="en">3D Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection">
+        <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A meaningful collection of concepts.</skos:definition>
+        <skos:scopeNote xml:lang="en">Labelled collections can be used where you would like a set of concepts to be displayed under a &apos;node label&apos; in the hierarchy.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label>Concept(Intangible Feature)</rdfs:label>
+        <skos:definition xml:lang="en">An idea or notion; a unit of thought.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A set of concepts, optionally including statements about semantic relationships between those concepts.</skos:definition>
+        <skos:example xml:lang="en">Thesauri, classification schemes, subject heading lists, taxonomies, &apos;folksonomies&apos;, and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.</skos:example>
+        <skos:scopeNote xml:lang="en">A concept scheme may be defined to include concepts from different sources.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#OrderedCollection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#OrderedCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">An ordered collection of concepts, where both the grouping and the ordering are meaningful.</skos:definition>
+        <skos:scopeNote xml:lang="en">Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a &apos;node label&apos;.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_ImgFont1_Environment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_TextFont1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_TextFont1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Text"/>
+        <P129_isAbout rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas"/>
+        <P165_incorporates rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_NrtFont1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Anger -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Anger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions"/>
+        <skos:prefLabel xml:lang="en">Anger</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Appreciation -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Appreciation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions"/>
+        <skos:prefLabel xml:lang="en">Appreciation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Awe -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Awe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions"/>
+        <skos:prefLabel xml:lang="en">Awe</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotional_Connection"/>
+        <skos:prefLabel xml:lang="en">Civic and Ethical Emotions</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collective_Belonging -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Collective_Belonging">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging"/>
+        <skos:prefLabel xml:lang="en">Collective belonging</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotional_Connection"/>
+        <skos:prefLabel xml:lang="en">Commemorative and Elevating Emotions</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Cultural_Expression -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Cultural_Expression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences"/>
+        <skos:prefLabel xml:lang="en">Cultural Expression</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Cultural_Well-being -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Cultural_Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Well-being"/>
+        <skos:altLabel xml:lang="en">Inclusion</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Cultural well-being</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotional_Connection"/>
+        <skos:prefLabel xml:lang="en">Difficult and Conflictual Emotions</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Emotional_Connection -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Emotional_Connection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences"/>
+        <skos:prefLabel xml:lang="en">Emotional Connection</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Emotional_Well-being -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Emotional_Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Well-being"/>
+        <skos:altLabel xml:lang="en">Peace</skos:altLabel>
+        <skos:altLabel xml:lang="en">Stress-relief</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Emotional well-being</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Emotions and Experiences</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Environmental_Well-being -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Environmental_Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Well-being"/>
+        <skos:altLabel xml:lang="en">Safety</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Environmental well-being</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Hearing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Hearing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Sensory_Experience"/>
+        <skos:altLabel xml:lang="en">Auditory perception</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Hearing</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Identity_and_Belonging -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences"/>
+        <skos:prefLabel xml:lang="en">Identity and Belonging</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Injustice_Indignation -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Injustice_Indignation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions"/>
+        <skos:prefLabel xml:lang="en">Injustice/Indignation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Intellectual_Well-being -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Intellectual_Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Well-being"/>
+        <skos:altLabel xml:lang="en">Curiosity</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Intellectual well-being</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Interpersonal_Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Well-being"/>
+        <skos:altLabel xml:lang="en">Connectedness</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Interpersonal well-being</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Narrating -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Narrating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Cultural_Expression"/>
+        <skos:altLabel xml:lang="en">Oral history</skos:altLabel>
+        <skos:altLabel xml:lang="en">Storytelling</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Narrating</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Nostalgia -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Nostalgia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions"/>
+        <skos:prefLabel xml:lang="en">Nostalgia</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Performing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Performing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Cultural_Expression"/>
+        <skos:altLabel xml:lang="en">Dance</skos:altLabel>
+        <skos:altLabel xml:lang="en">Music</skos:altLabel>
+        <skos:altLabel xml:lang="en">Theatre</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Performing</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Pride -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Pride">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions"/>
+        <skos:prefLabel xml:lang="en">Pride</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Respect -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Respect">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Commemorative_and_Elevating_Emotions"/>
+        <skos:prefLabel xml:lang="en">Respect</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Responsibility_Stewardship">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Civic_and_Ethical_Emotions"/>
+        <skos:prefLabel xml:lang="en">Responsibility/Stewardship</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Ritualizing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Ritualizing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Cultural_Expression"/>
+        <skos:altLabel xml:lang="en">Customs</skos:altLabel>
+        <skos:altLabel xml:lang="en">Festivals</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Ritualizing</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Seeing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Seeing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Sensory_Experience"/>
+        <skos:altLabel xml:lang="en">Visual perception</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Seeing</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Self-perception -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Self-perception">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging"/>
+        <skos:prefLabel xml:lang="en">Self-perception</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Sensory_Experience -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Sensory_Experience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotions_and_Experiences"/>
+        <skos:prefLabel xml:lang="en">Sensory Experience</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Smelling -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Smelling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Sensory_Experience"/>
+        <skos:altLabel xml:lang="en">Olfactory perception</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Smelling</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Spiritual_Well-being -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Spiritual_Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Well-being"/>
+        <skos:altLabel xml:lang="en">Purpose</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Spiritual well-being</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Tasting -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Tasting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Sensory_Experience"/>
+        <skos:altLabel xml:lang="en">Gustatory perception</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Tasting</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Touching -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Touching">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Sensory_Experience"/>
+        <skos:altLabel xml:lang="en">Bodily/Tactile perception</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Touching</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Value_Alignment -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Value_Alignment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Identity_and_Belonging"/>
+        <skos:prefLabel xml:lang="en">Value alignment</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Visualizing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Visualizing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Cultural_Expression"/>
+        <skos:altLabel xml:lang="en">Architecture</skos:altLabel>
+        <skos:altLabel xml:lang="en">Art</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Visualizing</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Well-being -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Emotional_Connection"/>
+        <skos:prefLabel xml:lang="en">Well-being</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Loss/Grief -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#Loss/Grief">
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.w3.org/2004/02/skos/core#Difficult_and_Conflictual_Emotions"/>
+        <skos:prefLabel xml:lang="en">Loss/Grief</skos:prefLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
