@@ -245,6 +245,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdfs:comment>Indicates implicit mention to an intangible feature</rdfs:comment>
         <rdfs:label>connects to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -257,6 +258,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"/>
+        <rdfs:comment>Indicates explicit mention to an intangible feature</rdfs:comment>
+        <rdfs:label>mentions</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -506,10 +509,9 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Link">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Image"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Defines a url link for the digital object</rdfs:comment>
         <rdfs:label xml:lang="en">Link</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -609,6 +611,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing"/>
+        <rdfs:comment>A heritage monument related to a nation or a group of people</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Heritage Monument</rdfs:label>
     </owl:Class>
     
@@ -762,6 +765,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type"/>
+        <rdfs:comment>Expressions related to experiences and emotions</rdfs:comment>
         <rdfs:label>Intangible Feature</rdfs:label>
     </owl:Class>
     
@@ -822,10 +826,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site -->
+    <!-- http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site">
+    <owl:Class rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#E27_Site"/>
         <rdfs:comment>A location where ancient religious or ceremonial/ritualistic practices were/are conducted.</rdfs:comment>
         <rdfs:label>Spiritual Or Ritual Site</rdfs:label>
@@ -960,7 +964,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas">
         <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site"/>
     </owl:NamedIndividual>

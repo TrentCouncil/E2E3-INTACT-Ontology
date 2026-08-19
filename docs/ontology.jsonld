@@ -147,6 +147,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A heritage monument related to a nation or a group of people"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Cultural Heritage Monument"
@@ -304,6 +307,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Expressions related to experiences and emotions"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Intangible Feature"
   } ],
@@ -326,12 +332,11 @@
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Link",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defines a url link for the digital object"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio"
-  }, {
-    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Image"
-  }, {
-    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative"
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -453,7 +458,7 @@
   }, {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site"
   }, {
-    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site"
+    "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite"
   }, {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech"
   }, {
@@ -484,7 +489,7 @@
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Text"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site",
+  "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A location where ancient religious or ceremonial/ritualistic practices were/are conducted."
@@ -549,6 +554,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates implicit mention to an intangible feature"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"
   } ],
@@ -564,8 +572,14 @@
 }, {
   "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates explicit mention to an intangible feature"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mentions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature"

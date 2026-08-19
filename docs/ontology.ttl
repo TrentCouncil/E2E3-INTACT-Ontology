@@ -150,6 +150,7 @@
             rdfs:subPropertyOf :P67_refers_to ;
             rdfs:domain :E31_Document ;
             rdfs:range :Intangible_Feature ;
+            rdfs:comment "Indicates implicit mention to an intangible feature" ;
             rdfs:label "connects to" .
 
 
@@ -157,7 +158,9 @@
 :mentions rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :P67_refers_to ;
           rdfs:domain :E31_Document ;
-          rdfs:range :Intangible_Feature .
+          rdfs:range :Intangible_Feature ;
+          rdfs:comment "Indicates explicit mention to an intangible feature" ;
+          rdfs:label "mentions" .
 
 
 ###  http://www.w3.org/2004/02/skos/core#broadMatch
@@ -324,10 +327,9 @@
 ###  http://www.semanticweb.org/int-act-project/E2E3-ontology#Link
 :Link rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
-      rdfs:domain :Audio ,
-                  :Image ,
-                  :Narrative ;
+      rdfs:domain :E31_Document ;
       rdfs:range xsd:anyURI ;
+      rdfs:comment "Defines a url link for the digital object" ;
       rdfs:label "Link"@en .
 
 
@@ -387,6 +389,7 @@
 ###  http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument
 :CulturalHeritageMonument rdf:type owl:Class ;
                           rdfs:subClassOf :E24_Physical_Human-Made_Thing ;
+                          rdfs:comment "A heritage monument related to a nation or a group of people" ;
                           rdfs:label "Cultural Heritage Monument"@en .
 
 
@@ -480,6 +483,7 @@
 ###  http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature
 :Intangible_Feature rdf:type owl:Class ;
                     rdfs:subClassOf :E55_Type ;
+                    rdfs:comment "Expressions related to experiences and emotions" ;
                     rdfs:label "Intangible Feature" .
 
 
@@ -518,11 +522,11 @@
          rdfs:label "Roll up"@en .
 
 
-###  http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site
-:Spiritual_or_Ritual_Site rdf:type owl:Class ;
-                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#E27_Site> ;
-                          rdfs:comment "A location where ancient religious or ceremonial/ritualistic practices were/are conducted." ;
-                          rdfs:label "Spiritual Or Ritual Site" .
+###  http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite
+:SpiritualOrRitualSite rdf:type owl:Class ;
+                       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#E27_Site> ;
+                       rdfs:comment "A location where ancient religious or ceremonial/ritualistic practices were/are conducted." ;
+                       rdfs:label "Spiritual Or Ritual Site" .
 
 
 ###  http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech
@@ -603,7 +607,7 @@ rdf:List rdf:type owl:Class .
 :S1_Cromeleque_das_Fontaínhas rdf:type owl:NamedIndividual ,
                                        :Cultural_Heritage_Site ,
                                        :Megalithic_Site ,
-                                       :Spiritual_or_Ritual_Site ,
+                                       :SpiritualOrRitualSite ,
                                        :StoneCircleOrCromlech ,
                                        :Touristic_Site .
 

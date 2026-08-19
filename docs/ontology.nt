@@ -131,6 +131,7 @@
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates implicit mention to an intangible feature" .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#connectsTo> <http://www.w3.org/2000/01/rdf-schema#label> "connects to" .
 # 
 # http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions
@@ -138,6 +139,8 @@
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/int-act-project/E2E3-ontology#P67_refers_to> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates explicit mention to an intangible feature" .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentions" .
 # 
 # http://www.w3.org/2004/02/skos/core#broadMatch
 <http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -294,10 +297,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/int-act-project/E2E3-ontology#Link
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio> .
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Image> .
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Narrative> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/int-act-project/E2E3-ontology#E31_Document> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a url link for the digital object" .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Link> <http://www.w3.org/2000/01/rdf-schema#label> "Link"@en .
 # 
 # http://www.w3.org/2004/02/skos/core#notation
@@ -354,6 +356,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/int-act-project/E2E3-ontology#E24_Physical_Human-Made_Thing> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument> <http://www.w3.org/2000/01/rdf-schema#comment> "A heritage monument related to a nation or a group of people" .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Heritage Monument"@en .
 # 
 # http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site
@@ -432,6 +435,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "Expressions related to experiences and emotions" .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Intangible Feature" .
 # 
 # http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview
@@ -464,11 +468,11 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up> <http://www.w3.org/2000/01/rdf-schema#comment> "Roll ups of the exhibition" .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#Roll_up> <http://www.w3.org/2000/01/rdf-schema#label> "Roll up"@en .
 # 
-# http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#E27_Site> .
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site> <http://www.w3.org/2000/01/rdf-schema#comment> "A location where ancient religious or ceremonial/ritualistic practices were/are conducted." .
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site> <http://www.w3.org/2000/01/rdf-schema#label> "Spiritual Or Ritual Site" .
+# http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#E27_Site> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite> <http://www.w3.org/2000/01/rdf-schema#comment> "A location where ancient religious or ceremonial/ritualistic practices were/are conducted." .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite> <http://www.w3.org/2000/01/rdf-schema#label> "Spiritual Or Ritual Site" .
 # 
 # http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -543,7 +547,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site> .
-<http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site> .
+<http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/int-act-project/E2E3-ontology#StoneCircleOrCromlech> .
 <http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site> .
 # 

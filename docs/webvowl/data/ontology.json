@@ -67,10 +67,10 @@
   "namespace": [],
   "settings": {
     "global": {
-      "zoom": "0.43",
+      "zoom": "0.29",
       "translation": [
-        313.86,
-        141.37
+        578.22,
+        319.14
       ],
       "paused": false
     },
@@ -131,7 +131,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "1",
+      "id": "11",
       "type": "owl:Class"
     },
     {
@@ -139,7 +139,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "12",
+      "id": "13",
       "type": "owl:Class"
     },
     {
@@ -159,11 +159,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "42",
-      "type": "owl:Class"
-    },
-    {
-      "id": "47",
+      "id": "40",
       "type": "owl:Class"
     },
     {
@@ -171,11 +167,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "55",
+      "id": "54",
       "type": "owl:Class"
     },
     {
-      "id": "31",
+      "id": "36",
       "type": "owl:Class"
     },
     {
@@ -191,11 +187,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "11",
+      "id": "12",
       "type": "owl:Class"
     },
     {
-      "id": "40",
+      "id": "42",
       "type": "owl:Class"
     },
     {
@@ -207,31 +203,31 @@
       "type": "owl:Class"
     },
     {
-      "id": "76",
-      "type": "owl:Class"
-    },
-    {
-      "id": "33",
-      "type": "owl:Class"
-    },
-    {
       "id": "75",
       "type": "owl:Class"
     },
     {
-      "id": "36",
-      "type": "owl:Class"
-    },
-    {
-      "id": "89",
-      "type": "owl:Class"
-    },
-    {
-      "id": "41",
+      "id": "32",
       "type": "owl:Class"
     },
     {
       "id": "74",
+      "type": "owl:Class"
+    },
+    {
+      "id": "44",
+      "type": "owl:Class"
+    },
+    {
+      "id": "88",
+      "type": "owl:Class"
+    },
+    {
+      "id": "39",
+      "type": "owl:Class"
+    },
+    {
+      "id": "73",
       "type": "owl:Class"
     },
     {
@@ -243,7 +239,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "77",
+      "id": "76",
+      "type": "owl:Class"
+    },
+    {
+      "id": "51",
       "type": "owl:Class"
     },
     {
@@ -255,15 +255,15 @@
       "type": "owl:Class"
     },
     {
-      "id": "34",
+      "id": "33",
       "type": "owl:Class"
     },
     {
-      "id": "95",
+      "id": "94",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "13",
+      "id": "1",
       "type": "owl:Class"
     },
     {
@@ -275,31 +275,27 @@
       "type": "owl:Thing"
     },
     {
-      "id": "44",
+      "id": "48",
       "type": "owl:Class"
     },
     {
-      "id": "94",
+      "id": "93",
       "type": "rdfs:Literal"
     },
     {
-      "id": "80",
+      "id": "79",
       "type": "rdfs:Literal"
     },
     {
-      "id": "96",
-      "type": "owl:Class"
-    },
-    {
-      "id": "100",
+      "id": "99",
       "type": "owl:unionOf"
     },
     {
-      "id": "30",
+      "id": "35",
       "type": "owl:Class"
     },
     {
-      "id": "51",
+      "id": "56",
       "type": "owl:Class"
     },
     {
@@ -328,12 +324,12 @@
         }
       ],
       "pos": [
-        2231.73,
-        -118.2
+        -215.78,
+        153.02
       ]
     },
     {
-      "id": "1",
+      "id": "11",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E55_Type",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -341,8 +337,8 @@
         "en": "E55 Type"
       },
       "pos": [
-        1300.89,
-        1235.51
+        1624.78,
+        818.58
       ]
     },
     {
@@ -593,12 +589,12 @@
         }
       ],
       "pos": [
-        2146.66,
-        1440.17
+        1641.34,
+        -739.09
       ]
     },
     {
-      "id": "12",
+      "id": "13",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E71_Human-Made_Thing",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -606,8 +602,8 @@
         "en": "E71 Human Made Thing"
       },
       "pos": [
-        1675.91,
-        450.41
+        1647.62,
+        1102.27
       ]
     },
     {
@@ -630,8 +626,8 @@
         }
       ],
       "pos": [
-        235.75,
-        866.34
+        2280.06,
+        44.22
       ]
     },
     {
@@ -671,8 +667,8 @@
         ]
       },
       "pos": [
-        2529.04,
-        467.79
+        546.7,
+        -760.03
       ]
     },
     {
@@ -684,8 +680,8 @@
         "en": "E18 Physical Thing"
       },
       "pos": [
-        1121.68,
-        61.84
+        1142.43,
+        1359.58
       ]
     },
     {
@@ -700,12 +696,12 @@
         "undefined": "3D model files"
       },
       "pos": [
-        683.2,
-        1852.41
+        669.09,
+        276.13
       ]
     },
     {
-      "id": "42",
+      "id": "40",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Video",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -716,32 +712,8 @@
         "undefined": "Video files"
       },
       "pos": [
-        841.72,
-        1759.52
-      ]
-    },
-    {
-      "id": "47",
-      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Spiritual_or_Ritual_Site",
-      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
-      "label": {
-        "IRI-based": "Spiritual_or_Ritual_Site",
-        "undefined": "Spiritual Or Ritual Site"
-      },
-      "comment": {
-        "undefined": "A location where ancient religious or ceremonial/ritualistic practices were/are conducted."
-      },
-      "individuals": [
-        {
-          "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas",
-          "labels": {
-            "IRI-based": "S1_Cromeleque_das_Fontaínhas"
-          }
-        }
-      ],
-      "pos": [
-        452.47,
-        510.98
+        648.48,
+        13.1
       ]
     },
     {
@@ -756,12 +728,12 @@
         "undefined": "An archaeological monument built with standing megalithic stones"
       },
       "pos": [
-        2115.92,
-        -448.58
+        -2.35,
+        447.03
       ]
     },
     {
-      "id": "55",
+      "id": "54",
       "iri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
       "baseIri": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
       "label": {
@@ -771,12 +743,12 @@
         "external"
       ],
       "pos": [
-        2473.07,
-        133.33
+        224.66,
+        -614
       ]
     },
     {
-      "id": "31",
+      "id": "36",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Archeological_Site",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -787,8 +759,8 @@
         "undefined": "The area where traces of human occupation have been found."
       },
       "pos": [
-        -15.41,
-        66.73
+        801.37,
+        1671.82
       ]
     },
     {
@@ -803,8 +775,8 @@
         "undefined": "Roll ups of the exhibition"
       },
       "pos": [
-        487.82,
-        1857.28
+        834.25,
+        -200.48
       ]
     },
     {
@@ -844,8 +816,8 @@
         ]
       },
       "pos": [
-        2375.8,
-        776.32
+        908.37,
+        -829.17
       ]
     },
     {
@@ -857,17 +829,20 @@
         "en": "E1 CRM Entity"
       },
       "pos": [
-        1383,
-        825.08
+        1883.93,
+        1187.41
       ]
     },
     {
-      "id": "11",
+      "id": "12",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Intangible_Feature",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
         "IRI-based": "Intangible_Feature",
         "undefined": "Intangible Feature"
+      },
+      "comment": {
+        "undefined": "Expressions related to experiences and emotions"
       },
       "individuals": [
         {
@@ -1088,12 +1063,12 @@
         }
       ],
       "pos": [
-        984.95,
-        1509.16
+        1304.56,
+        475.18
       ]
     },
     {
-      "id": "40",
+      "id": "42",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Cultural_Heritage_Site",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1112,8 +1087,8 @@
         }
       ],
       "pos": [
-        169.75,
-        518.33
+        108.78,
+        1306.65
       ]
     },
     {
@@ -1125,8 +1100,8 @@
         "en": "E31 Document"
       },
       "pos": [
-        572.75,
-        1477.29
+        1046.12,
+        141.39
       ]
     },
     {
@@ -1138,12 +1113,12 @@
         "en": "E33 Linguistic Object"
       },
       "pos": [
-        647.01,
-        884.04
+        1957.2,
+        211.44
       ]
     },
     {
-      "id": "76",
+      "id": "75",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Image",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1162,12 +1137,12 @@
         }
       ],
       "pos": [
-        240.64,
-        1228.7
+        702.62,
+        -109.16
       ]
     },
     {
-      "id": "33",
+      "id": "32",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#ArchaeologicalMonument",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1178,12 +1153,12 @@
         "undefined": "A monument that preserves traces of human occupation"
       },
       "pos": [
-        1777.42,
-        -504.47
+        341.43,
+        637.45
       ]
     },
     {
-      "id": "75",
+      "id": "74",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#App",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1194,12 +1169,12 @@
         "undefined": "A software application designed to guide or assist users, often in cultural or educational contexts"
       },
       "pos": [
-        311.8,
-        1768.05
+        1041.86,
+        -246.64
       ]
     },
     {
-      "id": "36",
+      "id": "44",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E90_Symbolic_Object",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1207,12 +1182,12 @@
         "en": "E90 Symbolic Object"
       },
       "pos": [
-        1442.99,
-        1152.9
+        1963.88,
+        615.09
       ]
     },
     {
-      "id": "89",
+      "id": "88",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Interview",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1223,12 +1198,12 @@
         "undefined": "Conversations capturing personal or collective testimonies."
       },
       "pos": [
-        700.3,
-        527.64
+        2303.44,
+        318.94
       ]
     },
     {
-      "id": "41",
+      "id": "39",
       "iri": "http://www.co-ode.org/ontologies/ont.owl#E27_Site",
       "baseIri": "http://www.co-ode.org/ontologies/ont.owl",
       "label": {
@@ -1242,12 +1217,12 @@
         "undefined": "This class comprises pieces of land or sea floor. In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps. Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location."
       },
       "pos": [
-        327.72,
-        180.08
+        484.25,
+        1395.93
       ]
     },
     {
-      "id": "74",
+      "id": "73",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Audio",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1258,8 +1233,8 @@
         "undefined": "Audio files"
       },
       "pos": [
-        151.16,
-        1357.48
+        629.35,
+        143.16
       ]
     },
     {
@@ -1274,8 +1249,8 @@
         "undefined": "A prototype or tool created to showcase a concept or functionality"
       },
       "pos": [
-        1916.53,
-        187.75
+        1826.63,
+        1453.96
       ]
     },
     {
@@ -1323,12 +1298,12 @@
         ]
       },
       "pos": [
-        1901.36,
-        1740.21
+        1779.07,
+        -384.98
       ]
     },
     {
-      "id": "77",
+      "id": "76",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Text",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1347,8 +1322,32 @@
         }
       ],
       "pos": [
-        196.48,
-        1617.58
+        780.57,
+        423.75
+      ]
+    },
+    {
+      "id": "51",
+      "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#SpiritualOrRitualSite",
+      "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
+      "label": {
+        "IRI-based": "SpiritualOrRitualSite",
+        "undefined": "Spiritual Or Ritual Site"
+      },
+      "comment": {
+        "undefined": "A location where ancient religious or ceremonial/ritualistic practices were/are conducted."
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#S1_Cromeleque_das_Fontaínhas",
+          "labels": {
+            "IRI-based": "S1_Cromeleque_das_Fontaínhas"
+          }
+        }
+      ],
+      "pos": [
+        162.48,
+        1164.42
       ]
     },
     {
@@ -1363,8 +1362,8 @@
         "external"
       ],
       "pos": [
-        722.3,
-        82.57
+        789.7,
+        1217.57
       ]
     },
     {
@@ -1376,25 +1375,28 @@
         "en": "E89 Propositional Object"
       },
       "pos": [
-        1717.18,
-        893.01
+        2081.56,
+        969.95
       ]
     },
     {
-      "id": "34",
+      "id": "33",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#CulturalHeritageMonument",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
         "IRI-based": "CulturalHeritageMonument",
         "en": "Cultural Heritage Monument"
       },
+      "comment": {
+        "undefined": "A heritage monument related to a nation or a group of people"
+      },
       "pos": [
-        1498.28,
-        -305.04
+        750.92,
+        809.78
       ]
     },
     {
-      "id": "95",
+      "id": "94",
       "iri": "http://www.w3.org/2001/XMLSchema#anyURI",
       "baseIri": "http://www.w3.org/2001/XMLSchema",
       "label": {
@@ -1404,12 +1406,12 @@
         "datatype"
       ],
       "pos": [
-        -321.09,
-        935.95
+        1230.06,
+        -53.67
       ]
     },
     {
-      "id": "13",
+      "id": "1",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E70_Thing",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1417,8 +1419,8 @@
         "en": "E70 Thing"
       },
       "pos": [
-        1305.84,
-        423.81
+        1531.71,
+        1424.68
       ]
     },
     {
@@ -1429,8 +1431,8 @@
         "undefined": "Thing"
       },
       "pos": [
-        1651.71,
-        1950.68
+        2075.05,
+        -257.06
       ]
     },
     {
@@ -1441,12 +1443,12 @@
         "undefined": "Thing"
       },
       "pos": [
-        431.27,
-        -683.69
+        36.43,
+        1825.47
       ]
     },
     {
-      "id": "44",
+      "id": "48",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Touristic_Site",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1465,58 +1467,47 @@
         }
       ],
       "pos": [
-        -17.07,
-        356.62
+        287.65,
+        1065.02
       ]
     },
     {
-      "id": "94",
+      "id": "93",
       "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
       "label": "Literal",
       "attributes": [
         "datatype"
       ],
       "pos": [
-        671.11,
-        -770.58
+        232.87,
+        2014.19
       ]
     },
     {
-      "id": "80",
+      "id": "79",
       "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
       "label": "Literal",
       "attributes": [
         "datatype"
       ],
       "pos": [
-        545.09,
-        -460.35
+        292.73,
+        1825.35
       ]
     },
     {
-      "id": "96",
+      "id": "99",
       "attributes": [
         "union",
         "anonymous"
       ],
       "pos": [
-        -100.37,
-        1062.34
+        1247.67,
+        -813.02
       ]
     },
     {
-      "id": "100",
-      "attributes": [
-        "union",
-        "anonymous"
-      ],
-      "pos": [
-        2314.92,
-        1084.96
-      ]
-    },
-    {
-      "id": "30",
+      "id": "35",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Megalithic_Site",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1535,12 +1526,12 @@
         }
       ],
       "pos": [
-        -314.36,
-        -104.34
+        1120.32,
+        1885.33
       ]
     },
     {
-      "id": "51",
+      "id": "56",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#E73_Information_Object",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -1548,8 +1539,8 @@
         "en": "E73 Information Object"
       },
       "pos": [
-        945.63,
-        1177.82
+        1575.68,
+        307.77
       ]
     },
     {
@@ -1561,8 +1552,8 @@
         "en": "E24 Physical Human Made Thing"
       },
       "pos": [
-        1506.46,
-        67.95
+        1188.57,
+        987.83
       ]
     }
   ],
@@ -1588,11 +1579,15 @@
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "32",
+      "id": "30",
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "35",
+      "id": "31",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "34",
       "type": "rdfs:subClassOf"
     },
     {
@@ -1604,7 +1599,7 @@
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "39",
+      "id": "41",
       "type": "rdfs:subClassOf"
     },
     {
@@ -1616,12 +1611,12 @@
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "46",
-      "type": "rdfs:subClassOf"
-    },
-    {
       "id": "7",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "47",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "49",
@@ -1640,11 +1635,7 @@
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "54",
-      "type": "rdfs:subClassOf"
-    },
-    {
-      "id": "56",
+      "id": "55",
       "type": "rdfs:subClassOf"
     },
     {
@@ -1688,20 +1679,20 @@
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "73",
-      "type": "rdfs:subClassOf"
-    },
-    {
       "id": "69",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "78",
+      "id": "77",
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "79",
+      "id": "78",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "80",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "81",
@@ -1732,11 +1723,7 @@
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "88",
-      "type": "rdfs:subClassOf"
-    },
-    {
-      "id": "90",
+      "id": "89",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1744,15 +1731,15 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "92",
-      "type": "owl:ObjectProperty"
-    },
-    {
       "id": "91",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "93",
+      "id": "90",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "92",
       "type": "owl:DatatypeProperty"
     },
     {
@@ -1760,19 +1747,23 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "95",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "96",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "97",
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "98",
-      "type": "rdfs:subClassOf"
-    },
-    {
-      "id": "48",
+      "id": "46",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "99",
+      "id": "98",
       "type": "owl:disjointWith"
     },
     {
@@ -1780,7 +1771,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "101",
+      "id": "100",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1792,11 +1783,15 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "102",
+      "id": "101",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "102",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1808,27 +1803,11 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "105",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "GENERATED-UNION-96-74-0",
+      "id": "GENERATED-UNION-99-20-0",
       "type": "setOperatorProperty"
     },
     {
-      "id": "GENERATED-UNION-96-76-1",
-      "type": "setOperatorProperty"
-    },
-    {
-      "id": "GENERATED-UNION-96-17-2",
-      "type": "setOperatorProperty"
-    },
-    {
-      "id": "GENERATED-UNION-100-20-0",
-      "type": "setOperatorProperty"
-    },
-    {
-      "id": "GENERATED-UNION-100-4-1",
+      "id": "GENERATED-UNION-99-4-1",
       "type": "setOperatorProperty"
     }
   ],
@@ -1843,8 +1822,8 @@
       "domain": "1",
       "range": "2",
       "pos": [
-        1341.95,
-        1030.3
+        1707.82,
+        1306.04
       ]
     },
     {
@@ -1855,8 +1834,8 @@
         "IRI-based": "semanticRelation"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -1893,8 +1872,8 @@
         "8"
       ],
       "pos": [
-        2276.7,
-        1522.97
+        1797.65,
+        -742.12
       ]
     },
     {
@@ -1905,8 +1884,8 @@
         "IRI-based": "narrower"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "comment": {
         "en": "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
@@ -1945,10 +1924,10 @@
       "superproperty": [
         "5"
       ],
-      "inverse": "91",
+      "inverse": "90",
       "pos": [
-        569.54,
-        -597.75
+        -50.93,
+        1688.72
       ]
     },
     {
@@ -1958,11 +1937,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "19",
-      "range": "20",
+      "domain": "11",
+      "range": "2",
       "pos": [
-        2452.42,
-        622.05
+        1754.36,
+        1002.99
       ]
     },
     {
@@ -1972,39 +1951,53 @@
         "object",
         "anonymous"
       ],
-      "domain": "30",
-      "range": "31",
+      "domain": "19",
+      "range": "20",
       "pos": [
-        -160.31,
-        -16.18
+        727.54,
+        -794.6
       ]
     },
     {
-      "id": "32",
+      "id": "30",
       "label": "Subclass of",
       "attributes": [
         "object",
         "anonymous"
       ],
-      "domain": "33",
-      "range": "34",
+      "domain": "21",
+      "range": "1",
       "pos": [
-        1637.85,
-        -404.75
+        1337.07,
+        1392.13
       ]
     },
     {
-      "id": "35",
+      "id": "31",
       "label": "Subclass of",
       "attributes": [
         "object",
         "anonymous"
       ],
-      "domain": "36",
-      "range": "15",
+      "domain": "32",
+      "range": "33",
       "pos": [
-        1643.19,
-        1084.22
+        546.17,
+        723.62
+      ]
+    },
+    {
+      "id": "34",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "35",
+      "range": "36",
+      "pos": [
+        956.47,
+        1775.64
       ]
     },
     {
@@ -2014,11 +2007,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "12",
-      "range": "13",
+      "domain": "13",
+      "range": "1",
       "pos": [
-        1490.88,
-        437.11
+        1589.67,
+        1263.48
       ]
     },
     {
@@ -2028,25 +2021,25 @@
         "object",
         "anonymous"
       ],
-      "domain": "21",
-      "range": "13",
+      "domain": "39",
+      "range": "22",
       "pos": [
-        1213.76,
-        242.82
+        636.97,
+        1306.75
       ]
     },
     {
-      "id": "39",
+      "id": "41",
       "label": "Subclass of",
       "attributes": [
         "object",
         "anonymous"
       ],
-      "domain": "40",
-      "range": "41",
+      "domain": "42",
+      "range": "39",
       "pos": [
-        250.96,
-        344.43
+        301.65,
+        1352.51
       ]
     },
     {
@@ -2057,10 +2050,10 @@
         "anonymous"
       ],
       "domain": "44",
-      "range": "41",
+      "range": "15",
       "pos": [
-        160.01,
-        265.94
+        2108.63,
+        771.47
       ]
     },
     {
@@ -2073,22 +2066,8 @@
       "domain": "9",
       "range": "10",
       "pos": [
-        2172.08,
-        -288.37
-      ]
-    },
-    {
-      "id": "46",
-      "label": "Subclass of",
-      "attributes": [
-        "object",
-        "anonymous"
-      ],
-      "domain": "41",
-      "range": "22",
-      "pos": [
-        525.01,
-        131.32
+        -105.97,
+        304.29
       ]
     },
     {
@@ -2099,9 +2078,9 @@
         "IRI-based": "related"
       },
       "attributes": [
-        "symmetric",
+        "external",
         "object",
-        "external"
+        "symmetric"
       ],
       "comment": {
         "en": "skos:related is disjoint with skos:broaderTransitive"
@@ -2127,14 +2106,28 @@
       "domain": "26",
       "range": "26",
       "subproperty": [
-        "48"
+        "46"
       ],
       "superproperty": [
         "3"
       ],
       "pos": [
-        308.94,
-        -786.08
+        -64.78,
+        1947.31
+      ]
+    },
+    {
+      "id": "47",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "48",
+      "range": "39",
+      "pos": [
+        388.64,
+        1235.01
       ]
     },
     {
@@ -2144,11 +2137,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "31",
-      "range": "41",
+      "domain": "36",
+      "range": "39",
       "pos": [
-        156.15,
-        123.41
+        642.81,
+        1533.87
       ]
     },
     {
@@ -2159,10 +2152,10 @@
         "anonymous"
       ],
       "domain": "51",
-      "range": "36",
+      "range": "39",
       "pos": [
-        1194.31,
-        1165.36
+        327.65,
+        1283.25
       ]
     },
     {
@@ -2172,11 +2165,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "47",
-      "range": "41",
+      "domain": "22",
+      "range": "21",
       "pos": [
-        388.23,
-        340.6
+        966.06,
+        1288.57
       ]
     },
     {
@@ -2189,36 +2182,22 @@
       "domain": "16",
       "range": "21",
       "pos": [
-        1314.07,
-        64.89
+        1165.5,
+        1173.7
       ]
     },
     {
-      "id": "54",
+      "id": "55",
       "label": "Subclass of",
       "attributes": [
         "object",
         "anonymous"
       ],
-      "domain": "16",
-      "range": "12",
+      "domain": "56",
+      "range": "44",
       "pos": [
-        1591.18,
-        259.18
-      ]
-    },
-    {
-      "id": "56",
-      "label": "Subclass of",
-      "attributes": [
-        "object",
-        "anonymous"
-      ],
-      "domain": "10",
-      "range": "33",
-      "pos": [
-        1946.67,
-        -476.53
+        1769.78,
+        461.43
       ]
     },
     {
@@ -2228,11 +2207,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "22",
-      "range": "21",
+      "domain": "10",
+      "range": "32",
       "pos": [
-        921.99,
-        72.2
+        169.54,
+        542.24
       ]
     },
     {
@@ -2246,14 +2225,17 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Indicates implicit mention to an intangible feature"
+      },
       "domain": "24",
-      "range": "11",
+      "range": "12",
       "superproperty": [
         "59"
       ],
       "pos": [
-        762.98,
-        1523.89
+        1189.19,
+        274.22
       ]
     },
     {
@@ -2263,11 +2245,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "11",
-      "range": "1",
+      "domain": "14",
+      "range": "13",
       "pos": [
-        1155.73,
-        1361.24
+        1737.13,
+        1278.11
       ]
     },
     {
@@ -2277,11 +2259,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "15",
-      "range": "12",
+      "domain": "16",
+      "range": "13",
       "pos": [
-        1696.54,
-        671.71
+        1418.1,
+        1045.05
       ]
     },
     {
@@ -2291,11 +2273,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "14",
-      "range": "12",
+      "domain": "15",
+      "range": "13",
       "pos": [
-        1796.22,
-        319.08
+        1864.59,
+        1036.11
       ]
     },
     {
@@ -2303,19 +2285,23 @@
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#mentions",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
-        "IRI-based": "mentions"
+        "IRI-based": "mentions",
+        "undefined": "mentions"
       },
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Indicates explicit mention to an intangible feature"
+      },
       "domain": "24",
-      "range": "11",
+      "range": "12",
       "superproperty": [
         "59"
       ],
       "pos": [
-        765.33,
-        1454.31
+        1130.52,
+        320.36
       ]
     },
     {
@@ -2326,8 +2312,8 @@
         "IRI-based": "inScheme"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -2361,8 +2347,8 @@
         "67"
       ],
       "pos": [
-        1768.89,
-        1851.89
+        1936.24,
+        -317.05
       ]
     },
     {
@@ -2373,9 +2359,9 @@
         "IRI-based": "closeMatch"
       },
       "attributes": [
-        "symmetric",
+        "external",
         "object",
-        "external"
+        "symmetric"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -2404,8 +2390,8 @@
         "8"
       ],
       "pos": [
-        270.63,
-        -689.06
+        -122.43,
+        1842.52
       ]
     },
     {
@@ -2416,8 +2402,8 @@
         "IRI-based": "hasTopConcept"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -2441,8 +2427,8 @@
       "range": "4",
       "inverse": "67",
       "pos": [
-        2013.28,
-        1603.31
+        1716.35,
+        -546.24
       ]
     },
     {
@@ -2452,25 +2438,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "34",
+      "domain": "33",
       "range": "16",
       "pos": [
-        1502.37,
-        -118.54
-      ]
-    },
-    {
-      "id": "73",
-      "label": "Subclass of",
-      "attributes": [
-        "object",
-        "anonymous"
-      ],
-      "domain": "18",
-      "range": "51",
-      "pos": [
-        796.32,
-        1030.93
+        969.74,
+        898.8
       ]
     },
     {
@@ -2481,10 +2453,10 @@
         "IRI-based": "exactMatch"
       },
       "attributes": [
-        "transitive",
-        "symmetric",
+        "external",
         "object",
-        "external"
+        "transitive",
+        "symmetric"
       ],
       "comment": {
         "en": "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
@@ -2513,26 +2485,26 @@
         "68"
       ],
       "pos": [
-        509.55,
-        -825.49
+        40.17,
+        1985.9
       ]
     },
     {
-      "id": "78",
+      "id": "77",
       "label": "Subclass of",
       "attributes": [
         "object",
         "anonymous"
       ],
-      "domain": "24",
-      "range": "51",
+      "domain": "18",
+      "range": "56",
       "pos": [
-        759.19,
-        1327.56
+        1766.44,
+        259.61
       ]
     },
     {
-      "id": "79",
+      "id": "78",
       "iri": "http://www.w3.org/2002/07/owl#topDataProperty",
       "baseIri": "http://www.w3.org/2002/07/owl",
       "label": {
@@ -2543,10 +2515,24 @@
         "external"
       ],
       "domain": "26",
-      "range": "80",
+      "range": "79",
       "pos": [
-        492.44,
-        -563.65
+        166.33,
+        1825.41
+      ]
+    },
+    {
+      "id": "80",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "71",
+      "range": "24",
+      "pos": [
+        940.18,
+        -29.54
       ]
     },
     {
@@ -2556,11 +2542,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "77",
+      "domain": "76",
       "range": "24",
       "pos": [
-        389.55,
-        1545.59
+        916.96,
+        278.73
       ]
     },
     {
@@ -2570,11 +2556,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "76",
-      "range": "24",
+      "domain": "24",
+      "range": "56",
       "pos": [
-        410.91,
-        1356.15
+        1310.9,
+        224.58
       ]
     },
     {
@@ -2584,11 +2570,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "42",
+      "domain": "40",
       "range": "24",
       "pos": [
-        707.24,
-        1618.41
+        847.3,
+        77.24
       ]
     },
     {
@@ -2598,11 +2584,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "71",
+      "domain": "23",
       "range": "24",
       "pos": [
-        530.28,
-        1667.28
+        857.6,
+        208.76
       ]
     },
     {
@@ -2612,11 +2598,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "74",
+      "domain": "73",
       "range": "24",
       "pos": [
-        361.95,
-        1417.38
+        837.73,
+        142.28
       ]
     },
     {
@@ -2626,11 +2612,11 @@
         "object",
         "anonymous"
       ],
-      "domain": "13",
-      "range": "2",
+      "domain": "75",
+      "range": "24",
       "pos": [
-        1344.42,
-        624.44
+        878.63,
+        19.22
       ]
     },
     {
@@ -2640,37 +2626,23 @@
         "object",
         "anonymous"
       ],
-      "domain": "75",
+      "domain": "74",
       "range": "24",
       "pos": [
-        442.27,
-        1622.67
+        1043.99,
+        -52.63
       ]
     },
     {
-      "id": "88",
-      "label": "Subclass of",
-      "attributes": [
-        "object",
-        "anonymous"
-      ],
-      "domain": "23",
-      "range": "24",
-      "pos": [
-        627.97,
-        1664.85
-      ]
-    },
-    {
-      "id": "90",
+      "id": "89",
       "iri": "http://www.w3.org/2004/02/skos/core#broadMatch",
       "baseIri": "http://www.w3.org/2004/02/skos/core",
       "label": {
         "IRI-based": "broadMatch"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -2693,13 +2665,13 @@
       "domain": "26",
       "range": "26",
       "superproperty": [
-        "91",
+        "90",
         "8"
       ],
       "inverse": "27",
       "pos": [
-        368.93,
-        -535.62
+        133.82,
+        1698.76
       ]
     },
     {
@@ -2710,9 +2682,9 @@
         "IRI-based": "broaderTransitive"
       },
       "attributes": [
-        "transitive",
+        "external",
         "object",
-        "external"
+        "transitive"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -2743,19 +2715,19 @@
       "domain": "26",
       "range": "26",
       "subproperty": [
-        "91"
+        "90"
       ],
       "superproperty": [
         "3"
       ],
       "inverse": "5",
       "pos": [
-        594.91,
-        -670.66
+        189.04,
+        1885.19
       ]
     },
     {
-      "id": "92",
+      "id": "91",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#P165_incorporates",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -2766,22 +2738,22 @@
         "object"
       ],
       "domain": "15",
-      "range": "36",
+      "range": "44",
       "pos": [
-        1600.48,
-        1042.36
+        2047.18,
+        787.97
       ]
     },
     {
-      "id": "91",
+      "id": "90",
       "iri": "http://www.w3.org/2004/02/skos/core#broader",
       "baseIri": "http://www.w3.org/2004/02/skos/core",
       "label": {
         "IRI-based": "broader"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "comment": {
         "en": "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
@@ -2815,7 +2787,7 @@
       "domain": "26",
       "range": "26",
       "subproperty": [
-        "90"
+        "89"
       ],
       "superproperty": [
         "6"
@@ -2823,7 +2795,7 @@
       "inverse": "25"
     },
     {
-      "id": "93",
+      "id": "92",
       "iri": "http://www.w3.org/2004/02/skos/core#notation",
       "baseIri": "http://www.w3.org/2004/02/skos/core",
       "label": {
@@ -2860,10 +2832,10 @@
         ]
       },
       "domain": "26",
-      "range": "94",
+      "range": "93",
       "pos": [
-        552.04,
-        -727.44
+        140.26,
+        1925.22
       ]
     },
     {
@@ -2874,8 +2846,8 @@
         "IRI-based": "mappingRelation"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "comment": {
         "en": "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
@@ -2901,17 +2873,45 @@
       "domain": "26",
       "range": "26",
       "subproperty": [
-        "48",
+        "46",
         "68",
         "27",
-        "90"
+        "89"
       ],
       "superproperty": [
         "3"
       ],
       "pos": [
-        296.28,
-        -595.79
+        -106.22,
+        1749.37
+      ]
+    },
+    {
+      "id": "95",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "88",
+      "range": "18",
+      "pos": [
+        2130.32,
+        265.19
+      ]
+    },
+    {
+      "id": "96",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "17",
+      "range": "18",
+      "pos": [
+        2113.94,
+        130.26
       ]
     },
     {
@@ -2921,38 +2921,24 @@
         "object",
         "anonymous"
       ],
-      "domain": "89",
-      "range": "18",
+      "domain": "12",
+      "range": "11",
       "pos": [
-        673.65,
-        705.84
+        1476.23,
+        659.27
       ]
     },
     {
-      "id": "98",
-      "label": "Subclass of",
-      "attributes": [
-        "object",
-        "anonymous"
-      ],
-      "domain": "17",
-      "range": "18",
-      "pos": [
-        446.65,
-        875.42
-      ]
-    },
-    {
-      "id": "48",
+      "id": "46",
       "iri": "http://www.w3.org/2004/02/skos/core#relatedMatch",
       "baseIri": "http://www.w3.org/2004/02/skos/core",
       "label": {
         "IRI-based": "relatedMatch"
       },
       "attributes": [
-        "symmetric",
+        "external",
         "object",
-        "external"
+        "symmetric"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -2979,12 +2965,12 @@
         "8"
       ],
       "pos": [
-        407.78,
-        -841.88
+        31.19,
+        1664.81
       ]
     },
     {
-      "id": "99",
+      "id": "98",
       "label": "Disjoint With",
       "attributes": [
         "object",
@@ -3001,8 +2987,8 @@
         "IRI-based": "topConceptOf"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -3030,7 +3016,7 @@
       "inverse": "70"
     },
     {
-      "id": "101",
+      "id": "100",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#P129_isAbout",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -3043,8 +3029,8 @@
       "domain": "15",
       "range": "2",
       "pos": [
-        1565.9,
-        799.23
+        2050.23,
+        1135.4
       ]
     },
     {
@@ -3065,8 +3051,8 @@
         "58"
       ],
       "pos": [
-        1545.45,
-        898.37
+        2083.88,
+        1164.71
       ]
     },
     {
@@ -3077,8 +3063,8 @@
         "IRI-based": "narrowMatch"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -3104,10 +3090,10 @@
         "25",
         "8"
       ],
-      "inverse": "90"
+      "inverse": "89"
     },
     {
-      "id": "102",
+      "id": "101",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#Link",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -3117,11 +3103,14 @@
       "attributes": [
         "datatype"
       ],
-      "domain": "96",
-      "range": "95",
+      "comment": {
+        "undefined": "Defines a url link for the digital object"
+      },
+      "domain": "24",
+      "range": "94",
       "pos": [
-        -223.69,
-        991.72
+        1150.53,
+        30.67
       ]
     },
     {
@@ -3132,9 +3121,9 @@
         "IRI-based": "narrowerTransitive"
       },
       "attributes": [
-        "transitive",
+        "external",
         "object",
-        "external"
+        "transitive"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -3173,16 +3162,16 @@
       "inverse": "6"
     },
     {
-      "id": "103",
+      "id": "102",
       "iri": "http://www.w3.org/2004/02/skos/core#memberList",
       "baseIri": "http://www.w3.org/2004/02/skos/core",
       "label": {
         "IRI-based": "memberList"
       },
       "attributes": [
-        "functional",
+        "external",
         "object",
-        "external"
+        "functional"
       ],
       "comment": {
         "en": "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
@@ -3206,14 +3195,14 @@
         ]
       },
       "domain": "19",
-      "range": "55",
+      "range": "54",
       "pos": [
-        2501.06,
-        300.56
+        385.68,
+        -687.01
       ]
     },
     {
-      "id": "104",
+      "id": "103",
       "iri": "http://www.semanticweb.org/int-act-project/E2E3-ontology#P46_IsComposedOf",
       "baseIri": "http://www.semanticweb.org/int-act-project/E2E3-ontology",
       "label": {
@@ -3226,20 +3215,20 @@
       "domain": "21",
       "range": "21",
       "pos": [
-        1107.42,
-        -96.83
+        1038.67,
+        1245.49
       ]
     },
     {
-      "id": "105",
+      "id": "104",
       "iri": "http://www.w3.org/2004/02/skos/core#member",
       "baseIri": "http://www.w3.org/2004/02/skos/core",
       "label": {
         "IRI-based": "member"
       },
       "attributes": [
-        "object",
-        "external"
+        "external",
+        "object"
       ],
       "annotations": {
         "isDefinedBy": [
@@ -3260,55 +3249,28 @@
         ]
       },
       "domain": "20",
-      "range": "100",
+      "range": "99",
       "pos": [
-        2422.72,
-        945.18
+        1081.1,
+        -883.58
       ]
     },
     {
-      "id": "GENERATED-UNION-96-74-0",
-      "domain": "96",
-      "range": "74",
-      "pos": [
-        25.39,
-        1209.91
-      ]
-    },
-    {
-      "id": "GENERATED-UNION-96-76-1",
-      "domain": "96",
-      "range": "76",
-      "pos": [
-        65.4,
-        1143.21
-      ]
-    },
-    {
-      "id": "GENERATED-UNION-96-17-2",
-      "domain": "96",
-      "range": "17",
-      "pos": [
-        63.14,
-        967
-      ]
-    },
-    {
-      "id": "GENERATED-UNION-100-20-0",
-      "domain": "100",
+      "id": "GENERATED-UNION-99-20-0",
+      "domain": "99",
       "range": "20",
       "pos": [
-        2270.54,
-        914.58
+        1075.39,
+        -765.58
       ]
     },
     {
-      "id": "GENERATED-UNION-100-4-1",
-      "domain": "100",
+      "id": "GENERATED-UNION-99-4-1",
+      "domain": "99",
       "range": "4",
       "pos": [
-        2238.04,
-        1247.25
+        1427.85,
+        -779.19
       ]
     }
   ]
